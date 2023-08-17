@@ -1,10 +1,21 @@
+/* --- GENERAL --- */
+
 html, body{
     width: 100%;
     height: 100%;
     top:0;
     left:0;
-    background-color: beige;
+    position: relative;
 }
+
+body{
+    z-index:-10;
+    background-color: #fcf7ed;
+    background-size: 10px 10px;
+    background-image: repeating-linear-gradient(45deg, #dbd0af 0, #dbd0af 1px, #fcf7ed 0, #fcf7ed 50%);
+}
+
+/* --- SECCIONES --- */
 
 #header{
     margin: 0;
@@ -18,10 +29,18 @@ section div{
     margin: 10%;
     padding: 10%;
 
-    border: 3px solid black;
-    border-radius: 10%;
+    border: 0.33em solid black;
+    border-radius: 5em;
     background-color: white;
 }
+
+.welcome{
+    margin: 10%;
+    padding: 1em;
+    background-color: white;
+}
+
+/* --- FUENTES --- */
 
 p, h1, h2, h3, h4, h5, h6, ul, li {
     font-family: 'Raleway', sans-serif;;
@@ -29,13 +48,41 @@ p, h1, h2, h3, h4, h5, h6, ul, li {
 
 h1, h2, h3, h4, h5, h6{
     font-weight: 800;
+    line-height: 1em;
+    margin-top: 2rem;
 }
+
+h1{font-size: 2.5em;}
+h2{font-size: 2.2em;}
+h3{font-size: 1.9em;}
+h4{font-size: 1.6em;}
+h5{font-size: 1.3em;}
+h6{font-size: 1em;}
 
 p{
     font-weight: 400;
+    line-height: 1.8em;
 }
 
 section h1{
     text-align: center;
     color:darkblue;
+}
+
+.strong{
+    font-weight: 800;
+    font-size: 1.2em;
+}
+
+.shh{
+    color: gray;
+    font-size: 0.8em;
+}
+
+
+/* --- IMAGENES --- */
+img{
+    width: 100%;
+    border-radius: 5em;
+    border: 3px solid black;
 }

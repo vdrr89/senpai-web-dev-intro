@@ -13,34 +13,67 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=family=Raleway:ital,wght@0,200;0,400;0,800;1,200;1,400;1,800&display=swap" rel="stylesheet">
 
+    <!-- Code Style -->
+	<link href="prism.css" rel="stylesheet" />
 </head>
 <body>
 
     <section id="header">
-        <h1>Senpai Web Development</h1>
-        <h2>Curso Introductorio</h2>
+        <h1>Notas de un curso de Web Development</h1>
+        <h2>Es un mini curso introductorio de Senpai</h2>
     </section>
 
 
     <section id="clasesHTML">
 
+        <p class="welcome">Hola! Soy Verónica, aquí tengo algunas notas sobre un curso introductorio de Web Development que estoy tomando en Senpai.</p>
+
         <h1>Clases HTML</h1>
         <!-- 1 - instalar vsc, hacer un archivo html y poner h1 p h3 img ul li -->
         <div id="clase1">
-            <h2>Clase 1: Instalar VSC, hacer un archivo html y poner h1 p h3 img ul li</h2>
-            <p>Este es un proyecto para el curso introductorio de Web Development dictado por Senpai</p>
-            <p>En Visual Studio Code, al escribir Lorem aparece la opción para que se autoescriba un texto lorem como en el siguiente párrafo:</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, sed! Sequi, sed illo voluptates ut labore earum error iste quis laudantium odio qui corporis. Repellat repellendus asperiores earum delectus impedit.</p>
-
+            <h2>Clase I: Introducción</h2>
+            <p class="strong">
+                Instalar Visual Studio Code, hacer un archivo html y usar las etiquetas: <pre><code class="language-css">&lt;h1> &lt;p> &lt;h3> &lt;img> &lt;ul> &lt;li></code></pre>
+                <br>
+                La mayoría de las etiquetas (como por ejemplo, h1, h2, h..., p, ul, li, entre otras), tienen apertura y cierre
+                <br>
+                <pre><code class="language-css">&lt;p>texto aquí&lt;/p>
+    &lt;h1>texto aquí&lt;/h1></code></pre>
+            </p>
+            <p class="shh">
+                Pique:<br>
+                En Visual Studio Code, al escribir Lorem aparece la opción para que se autoescriba un texto lorem como en el siguiente párrafo:<br>
+                <pre><code class="language-css">&lt;p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, sed! Sequi, sed illo voluptates ut labore earum error iste quis laudantium odio qui corporis. Repellat repellendus asperiores earum delectus impedit.&lt;/p></code></pre>
+            </p>
             <h3>Colocando una imagen</h3>
-            <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.pngtree.com%2Ffreebackground%2Fsky-clouds-sunset-background_2448573.html&psig=AOvVaw0mlP8CrAON2xaYP45tiyxW&ust=1692308276625000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCNikteSR4oADFQAAAAAdAAAAABAJ" alt="fantasy sky">
-            
-            <h3>Escribimos una lista desordenada a continuación</h3>
-            <ul>
-                <li>Aquí ponemos un elemento</li>
-                <li>Aquí el elemento siguiente</li>
-                <li>Y el último elemento</li>
-            </ul>
+            <p>
+                Para indicar que queremos colocar una imagen usamos la etiqueta img, dentro de ella podemos poner el atributo alt, que sirve por ejemplo para usar en dispositivos de gente que no tiene buena audición o visión y necesita que el dispositivo lea lo que hay en la web, también es útil para que los motores de búsqueda puedan identificar cual es el contenido que hay en el sitio y que relevancia tiene.<br>
+                <br>
+                Ésta etiqueta se usa de la siguiente forma:<br>
+                <pre><code class="language-css">&lt;img src="https://aquí-la-url-de-la-imagen-o-su-ruta.jpg" alt="breve descripcion"></code></pre>
+            </p>
+            <p>
+                Ésta etiqueta no tiene cierre, solo se abre y listo.<br>
+                <span class="shh">Yo le agregué unos atributos más, como el borde redondeado, sólido y de color negro, tuve que aclararle la medida del ancho y me quedó así:</span>
+            </p>
+            <img src="https://png.pngtree.com/thumb_back/fw800/background/20230408/pngtree-sky-colorful-clouds-fantasy-background-image_2136866.jpg" alt="fantasy sky">
+            <br>
+            <h3>Escribimos una lista desordenada:</h3>
+            <p>El código para ésta es:</p>
+            <pre><code class="language-css">
+&lt;ul>
+    &lt;li>Aquí ponemos un elemento &lt;/li>
+    &lt;li>Aquí el elemento siguiente &lt;/li>
+    &lt;li>Y el último elemento &lt;/li>
+&lt;/ul></code>
+            </pre>
+            <br>
+            <p>Y luce de ésta manera:</p>
+                <ul>
+                    <li>Aquí ponemos un elemento </li>
+                    <li>Aquí el elemento siguiente </li>
+                    <li>Y el último elemento </li>
+                </ul>
         </div>
 
         <!-- Estructura del html y sus etiquetas -->
@@ -49,12 +82,16 @@
             <h1>Estructuras</h1>
 
             <h3>Declaración HTML</h3>
-            <p>Se coloca al inicio y al final, sirve para decirle al navegador que clase de archivo está leyendo, para así, leerlo correctamente</p>
+            <p>Si bien luce como una etiqueta, en realidad es una declaración, ésta se coloca al inicio y se pone una de cierre al final del documento.<br>
+                Sirve para decirle al navegador que clase de archivo está leyendo, para que pueda leerlo correctamente</p>
 
-            <h3>Etiqueta Meta</h3>
-            <p>Son metadatos, por ejemplo charset refiere al idioma en el que se sarrolla el sitio</p>
-            <p>Se pueden colocar otras metadatas</p>
-            <p>Title, es el texto que aparece en la pestaña del navegador</p>
+            <h3>etiquetas Meta</h3>
+            <p>
+                Son metadatos, por ejemplo charset refiere al idioma en el que se sarrolla el sitio<br>
+                Se pueden colocar otras metadatas.
+            </p>
+            <h3>Title</h3>
+            <p>Es el texto que aparece en la pestaña del navegador</p>
 
             <h3>Comentarios</h3>
             <p> los comentarios en html se escriben (sin espacios) así: < ! - - y luego para cerrarlo así (sin espacios): - - ></p>
@@ -112,6 +149,9 @@
     <div>
         <p>vdrr89 | <a href="mailto:vdrr89@gmail.com">vdrr89@gmail.com</a> | <a href="github.com/vdrr89">Github</a> | <a href="linkedin.com/in/veronicaromero89">Linkedin</a></p>
     </div>
+
+    <!-- Code Style -->
+    <script src="prism.js"></script>
 
 </body>
 </html>
