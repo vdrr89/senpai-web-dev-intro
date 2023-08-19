@@ -9,10 +9,17 @@ html, body{
 }
 
 body{
+}
+
+.allBackground{
     z-index:-10;
     background-color: #fcf7ed;
     background-size: 10px 10px;
     background-image: repeating-linear-gradient(45deg, #dbd0af 0, #dbd0af 1px, #fcf7ed 0, #fcf7ed 50%);
+}
+
+iframe{
+    width: 100%;
 }
 
 /* --- SECCIONES --- */
