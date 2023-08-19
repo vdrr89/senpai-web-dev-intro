@@ -40,9 +40,16 @@ section div{
     background-color: white;
 }
 
+.footer{
+    height: 6em;
+    padding: 3.5em;
+    text-align: center;
+    background-color: #00000070;
+}
+
 /* --- FUENTES --- */
 
-p, h1, h2, h3, h4, h5, h6, ul, li {
+p, h1, h2, h3, h4, h5, h6, ul, li, blockquote {
     font-family: 'Raleway', sans-serif;;
 }
 
@@ -59,9 +66,16 @@ h4{font-size: 1.6em;}
 h5{font-size: 1.3em;}
 h6{font-size: 1em;}
 
-p{
+p, blockquote, ul, li{
     font-weight: 400;
     line-height: 1.8em;
+}
+
+blockquote, .grayblock{
+    background-color: lightgray;
+    padding: 1em;
+    border-radius: 0;
+    border: none;
 }
 
 section h1{
@@ -77,6 +91,10 @@ section h1{
 .shh{
     color: gray;
     font-size: 0.8em;
+}
+
+.highlight{
+    background-color: gold;
 }
 
 

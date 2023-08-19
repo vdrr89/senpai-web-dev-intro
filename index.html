@@ -32,14 +32,27 @@
         <!-- 1 - instalar vsc, hacer un archivo html y poner h1 p h3 img ul li -->
         <div id="clase1">
             <h2>Clase I: Introducción</h2>
-            <p class="strong">
-                Instalar Visual Studio Code, hacer un archivo html y usar las etiquetas: <pre><code class="language-css">&lt;h1> &lt;p> &lt;h3> &lt;img> &lt;ul> &lt;li></code></pre>
-                <br>
-                La mayoría de las etiquetas (como por ejemplo, h1, h2, h..., p, ul, li, entre otras), tienen apertura y cierre
-                <br>
-                <pre><code class="language-css">&lt;p>texto aquí&lt;/p>
-    &lt;h1>texto aquí&lt;/h1></code></pre>
+            <div class="grayblock">
+                <p>Instalar Visual Studio Code, hacer un archivo html y usar las etiquetas: </p>
+                <pre><code class="language-css">&lt;h1> &lt;p> &lt;h3> &lt;img> &lt;ul> &lt;li></code></pre><br>
+            </div>
+            
+               <p> Éstas etiquetas significan:</p>
+                <ul>
+                    <li><b>p</b> - párrafo</li>
+                    <li><b>h1, h2, h3...</b> - headings, encabezados, hay del 1 al 6</li>
+                    <li><b>img</b> - imagen</li>
+                    <li><b>ul</b> - lista desordenada</li>
+                    <li><b>li</b> - elemento dentro de la lista</li>
+                </ul>
+            
+            <p>
+                <span class="highlight">La mayoría de las etiquetas</span> 
+                (como por ejemplo, h1, h2, h..., p, ul, li, entre otras), 
+                <span class="highlight">tienen apertura y cierre</span>
             </p>
+            <pre><code class="language-css">&lt;p>texto aquí&lt;/p>
+&lt;h1>texto aquí&lt;/h1></code></pre>
             <p class="shh">
                 Pique:<br>
                 En Visual Studio Code, al escribir Lorem aparece la opción para que se autoescriba un texto lorem como en el siguiente párrafo:<br>
@@ -47,13 +60,13 @@
             </p>
             <h3>Colocando una imagen</h3>
             <p>
-                Para indicar que queremos colocar una imagen usamos la etiqueta img, dentro de ella podemos poner el atributo alt, que sirve por ejemplo para usar en dispositivos de gente que no tiene buena audición o visión y necesita que el dispositivo lea lo que hay en la web, también es útil para que los motores de búsqueda puedan identificar cual es el contenido que hay en el sitio y que relevancia tiene.<br>
+                Para indicar que queremos colocar una imagen usamos la <span class="highlight">etiqueta img</span>, dentro de ella podemos poner el atributo alt, que sirve por ejemplo para usar en dispositivos de gente que no tiene buena audición o visión y necesita que el dispositivo lea lo que hay en la web, también es útil para que los motores de búsqueda puedan identificar cual es el contenido que hay en el sitio y que relevancia tiene.<br>
                 <br>
                 Ésta etiqueta se usa de la siguiente forma:<br>
                 <pre><code class="language-css">&lt;img src="https://aquí-la-url-de-la-imagen-o-su-ruta.jpg" alt="breve descripcion"></code></pre>
             </p>
             <p>
-                Ésta etiqueta no tiene cierre, solo se abre y listo.<br>
+                Ésta etiqueta <span class="highlight">no tiene cierre</span>, solo se abre y listo.<br>
                 <span class="shh">Yo le agregué unos atributos más, como el borde redondeado, sólido y de color negro, tuve que aclararle la medida del ancho y me quedó así:</span>
             </p>
             <img src="https://png.pngtree.com/thumb_back/fw800/background/20230408/pngtree-sky-colorful-clouds-fantasy-background-image_2136866.jpg" alt="fantasy sky">
@@ -82,19 +95,34 @@
             <h1>Estructuras</h1>
 
             <h3>Declaración HTML</h3>
-            <p>Si bien luce como una etiqueta, en realidad es una declaración, ésta se coloca al inicio y se pone una de cierre al final del documento.<br>
-                Sirve para decirle al navegador que clase de archivo está leyendo, para que pueda leerlo correctamente</p>
-
-            <h3>etiquetas Meta</h3>
+            <pre><code class="language-css">&lt;!DOCTYPE html>
+    Aquí en medio va todo el contenido del documento html
+&lt;/html></code></pre>
             <p>
-                Son metadatos, por ejemplo charset refiere al idioma en el que se sarrolla el sitio<br>
-                Se pueden colocar otras metadatas.
+                Si bien luce como una etiqueta, en realidad es una declaración, ésta se coloca al inicio y se pone una de cierre al final del documento.<br>
+                <span class="highlight">Sirve para decirle al navegador que clase de archivo está leyendo</span>, para que pueda leerlo correctamente
             </p>
+            <p>
+                Según Wikipedia una declaración es:<br>
+                <blockquote>
+                    Una declaración de tipo de documento o DOCTYPE (del inglés document type declaration) asocia un documento SGML o XML particular con una definición de tipo de documento.<br>
+                    <a target="_blank" href="https://es.wikipedia.org/wiki/Declaraci%C3%B3n_de_tipo_de_documento">Wikipedia</a>
+                </blockquote>
+            </p>
+            <br>
+            <h3>etiquetas Meta</h3>
+            <pre><code class="language-css">&lt;meta charset="UTF-8"></code></pre>
+            <p>
+                Son metadatos, metainformación, <span class="highlight">brindan información sobre el documento</span>, por ejemplo meta charset se refiere a la codificación de caracteres.<br>
+                En el siguiente enlace puedes encontrar más información sobre ellas <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/HTML/Element/meta">este enlace</a>
+            </p>
+            <br>
             <h3>Title</h3>
+            <pre><code class="language-css">&lt;title>senpai project&lt;/title></code></pre>
             <p>Es el texto que aparece en la pestaña del navegador</p>
-
+            <br>
             <h3>Comentarios</h3>
-            <p> los comentarios en html se escriben (sin espacios) así: < ! - - y luego para cerrarlo así (sin espacios): - - ></p>
+            <pre><code class="language-css">&lt;!-- esto es un comentario --&gt</code></pre>
 
         </div>
 
@@ -102,26 +130,27 @@
 
         <!-- Lectua depurar html -->
         <div id="clase4">
-            <h1>Lectua depurar html</h1>
-            <p>Aquí se presenta una lectura desde la web de MDN Web Docs de Mozilla: <a href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">link aquí</a></p>
+            <h2>Lectura depurar html</h2>
+            <p>Aquí hay un artículo para leer desde la web de <b>MDN Web Docs de Mozilla:</b> <a target="_blank" href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">link aquí</a></p>
 
-            <p>Cuando algo anda mal pueden ser Errores sintácticos ó Errores lógicos</p>
-
-            <p>Aquí se recomienda una web que sirve para validar etiquetas, la web es de W3C, <a href="https://validator.w3.org/">este es el link</a></p>
+            <p>En esta lectura recomiendan una <span class="highlight">aplicación web</span> muy útil, que sirve <span class="highlight">para validar etiquetas</span>, por ejemplo, te avisa donde te olvidaste de cerrar alguna etiqueta o si hay alguna que la cerraste doble, es una web de <b>W3Schools</b>, <a target="_blank" href="https://validator.w3.org/">este es el link</a></p>
         </div>
 
         <!-- Referencia de elementos HTML -->
         <div id="clase5">
             <h1>Referencia de elementos HTML</h1>
-            <p>Aquí brindan información, también de la página de Mozilla MDN Web Docs, que hablan sobre las etiquetas HTML que existen, <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element">este es el link</a></p>
+            <p>Aquí brindan información, también de la página de <b>Mozilla MDN Web Docs</b>, que hablan sobre las etiquetas HTML que existen, <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/HTML/Element">este es el link</a></p>
+            <br>
+            <p>Otro sitio que tiene bastante información sobre las etiquetas HTML que existen es <b>W3Schools</b> <a href="https://www.w3schools.com/html/default.asp">este es el link</a></p>
         </div>
 
         <!-- Semántica HTML -->
         <div id="clase6">
             <h1>Semántica HTML</h1>
 
-            <p>los html tienen que explicarse a si mismo, tienen que ser descriptivos en sus etiquetas, esto ayuda a quienes usan dispositivos con diversos tipos de accesibilidad</p>
-            <p>La etiqueta main es lo más importante dentro de esa página, a diferencia de div que es una división no tan importante, lso motores de búsqueda le van a dar más relevancia por ejemplo a la etiqueta main.</p>
+            <p>Los html <span class="highlight">tienen que explicarse a si mismo, tienen que ser descriptivos en sus etiquetas</span>, esto <b>es útil para quienes usan dispositivos con diversos tipos de accesibilidad</b>, por ejemplo, personas visión reducida.</p>
+            <p>También es importante para los <b>motores de búsqueda</b>, por ejemplo, la etiqueta main determina que es lo más importante dentro de esa página, a diferencia de div que es una división no tan importante, los motores de búsqueda le van a dar más relevancia por ejemplo a la etiqueta main.</p>
+            <p>Ser claros al momento de escribir el código también nos ayuda a nosotros mismos a <b>entendernos</b> cuando vamos a abrir el documento, para saber que quisimos hacer, y en caso de trabajar en un equipo también ayuda a nuestros compañeros o colaboradores a entendernos entre todos.</p>
 
         </div>
 
@@ -138,16 +167,65 @@
         <!-- Clase 1 - CSS Introducción: Selectores -->
         <div id="clase1css">
             <h2>CSS Introducción: selectores</h2>
-            <p>Dentro de un archivo html, dentro de la etiqueta head, hacemos una etiqueta style, y a la etiqueta (x ej) p le asignamos un color</p>
-            <p>En css se puede sobreescribir, osea, el navegdor va leyendo desde arriba hacia abajo, si primero le damos un color a p, y luego le damos otro color a p, finalemente se va a mostrar el último color</p>
-            <p>Se puede asignar atributos de estilo a etiquetas, así como a clases, o a id</p>
+            <p>En esta clase se explica como usar CSS dentro de la etiqueta head, aunque también se puede usar CSS en otro archivo aparte para luego "linkearlo" dentro de la etiqueta head.</p>
+            <p class="grayblock">Dentro del archivo <span class="highlight">html</span>, dentro de la etiqueta <span class="highlight">head</span>, creamos una etiqueta <span class="highlight">style</span>, y dentro de eésta, elegimos un selector, por ejemplo p ó h1 y le asignamos un color, un tamaño de fuente.</p>
+            <img src="https://www.w3schools.com/css/img_selector.gif" alt="css nombres" style="border: none; border-radius: 0; margin: 1em 0;">
+            <p><span class="highlight">En css se puede sobreescribir</span>, osea, el navegdor va leyendo desde arriba hacia abajo, si primero le damos un color a p, y luego le damos otro color a p, finalemente se va a mostrar el último color</p>
+            <p>Los selectores pueden ser etiquetas, clases, id</p>
+            <p>En clase se hizo así:</p>
+            <pre><code class="language-css">
+&lt;!DOCTYPE html>
+    &lt;head>
+        &lt;title>Aquí va el title&lt;/title>
+        &lt;style>  &lt;!-- Acá ponemos la etiqueta style y dentro el estilo --&gt
+            body {
+                background-color: lightblue;
+            }
+                
+            h1 {
+                color: navy;
+                margin-left: 20px;
+            }
+        &lt;/style>
+    &lt;/head>
+
+    &lt;body>
+        &lt;p>Aquí va todo el body&lt;/p>
+    &lt;/body>
+&lt;/html>
+
+            </code></pre>
+            <br>
+            <p>También se puede hacer así:</p>
+            <pre><code class="language-css">
+&lt;!DOCTYPE html>
+    &lt;head>
+        &lt;link rel="stylesheet" href="aquí-la-ruta-y-nombre-del-archivo.css"> &lt;!-- aquí se "linkea" el otro documento que contiene el css --&gt
+        &lt;title>Aquí va el title&lt;/title>
+    &lt;/head>
+
+    &lt;body>
+        &lt;p>Aquí va todo el body&lt;/p>
+    &lt;/body>
+&lt;/html>
+            </code>
+            </code></pre>
+
+        </div>
+
+        <!-- Pique1CSS - fuentes y colores web source -->
+        <div id="pique1css">
+            <h2>Pique (fuentes y colores web):</h2>
+            <p>Alugnos lugares donde se pueden conseguir fuentes es por ejemplo <a href="https://fonts.google.com/">Google Fonts</a><br>
+            Y para conseguir colores web, en formato hexadecimal se pueden encontrar en <a href="https://www.w3schools.com/colors/colors_picker.asp">una aplicación de W3Schools</a></p>
         </div>
 
     </section>
 
     <!-- Footer -->
-    <div>
-        <p>vdrr89 | <a href="mailto:vdrr89@gmail.com">vdrr89@gmail.com</a> | <a href="github.com/vdrr89">Github</a> | <a href="linkedin.com/in/veronicaromero89">Linkedin</a></p>
+    <div class="footer">
+        <p>Creado por vdrr89 en base a clases introductorias gratuitas de Senpai (Uruguay) + conocimientos propios y lecturas varias de internet.<br>
+        <a href="mailto:vdrr89@gmail.com">vdrr89@gmail.com</a> | <a target="_blank" href="github.com/vdrr89">Github</a> | <a target="_blank" href="linkedin.com/in/veronicaromero89">Linkedin</a></p>
     </div>
 
     <!-- Code Style -->
