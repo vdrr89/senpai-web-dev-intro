@@ -1,4 +1,5 @@
 <!-- CLASES HTML -->
+<!-- cualqueiri cosa buscar vdrr89 fix -->
 
 <head>
     <!-- My styles -->
@@ -14,143 +15,191 @@
 </head>
 
 <body>
+    <!-- CLASES HTML -->
     <section id="clasesHTML">
 
         <p class="welcome">Hola! Soy Verónica, aquí tengo algunas notas sobre un <b>curso introductorio de Web Development</b> que estoy tomando en <b>Senpai.</b></p>
 
         <h1>Clases HTML</h1>
+
+        <!-- 0 -->
+        <div id="clasePresencial1" class="chapter">
+            <div><!-- titulo -->
+
+            </div>
+            <div><!-- vdrr89 // fix // contenido -->
+                <p>El html es un documento d eetiquetado</p>
+            </div>
+        </div>
+
         <!-- 1 - instalar vsc, hacer un archivo html y poner h1 p h3 img ul li -->
-        <div id="clase1">
-            <h2>Clase I: Introducción</h2>
-            <div class="grayblock">
-                <p>Instalar Visual Studio Code, hacer un archivo html y usar las etiquetas: </p>
-                <pre><code class="language-css">&lt;h1> &lt;p> &lt;h3> &lt;img> &lt;ul> &lt;li></code></pre><br>
+        <div id="clase1" class="chapter">
+            <div> <!-- title -->
+                <h2>Clase I: Introducción</h2>   
             </div>
             
-            <p> Éstas etiquetas significan:</p>
-                <ul>
-                    <li><b>p</b> - párrafo</li>
-                    <li><b>h1, h2, h3...</b> - headings, encabezados, hay del 1 al 6</li>
-                    <li><b>img</b> - imagen</li>
-                    <li><b>ul</b> - lista desordenada</li>
-                    <li><b>li</b> - elemento dentro de la lista</li>
-                </ul>
-            
-            <p>
-                <span class="highlight">La mayoría de las etiquetas</span> 
-                (como por ejemplo, h1, h2, h..., p, ul, li, entre otras), 
-                <span class="highlight">tienen apertura y cierre</span>
-            </p>
-            <pre><code class="language-css">&lt;p>texto aquí&lt;/p>
-    &lt;h1>texto aquí&lt;/h1></code></pre>
-            <p class="shh">
-                Pique:<br>
-                En Visual Studio Code, al escribir Lorem aparece la opción para que se autoescriba un texto lorem como en el siguiente párrafo:<br>
-                <pre><code class="language-css">&lt;p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, sed! Sequi, sed illo voluptates ut labore earum error iste quis laudantium odio qui corporis. Repellat repellendus asperiores earum delectus impedit.&lt;/p></code></pre>
-            </p>
-            <h3>Colocando una imagen</h3>
-            <p>
-                Para indicar que queremos colocar una imagen usamos la <span class="highlight">etiqueta img</span>, dentro de ella podemos poner el atributo alt, que sirve por ejemplo para usar en dispositivos de gente que no tiene buena audición o visión y necesita que el dispositivo lea lo que hay en la web, también es útil para que los motores de búsqueda puedan identificar cual es el contenido que hay en el sitio y que relevancia tiene.<br>
+            <div>
+                <!-- TO DO -->
+                <div class="grayblock">
+                    <p>Instalar Visual Studio Code, hacer un archivo html y usar las etiquetas: </p>
+                    <pre><code class="language-css">&lt;h1> &lt;p> &lt;h3> &lt;img> &lt;ul> &lt;li></code></pre><br>
+                </div>
+
+                <!-- INSTALAR VSC -->
+                <h3>Instalar Visual Studio Code</h3>
+                <p>Para instalar Visual Studio Code hay que entrar en la web: <a href="https://code.visualstudio.com/">code.visualstudio.com</a> y seguir los pasos que allí indican.</p>
+                <p>En el curso recomiendan Visual Studio Code, aunque en realidad cualquier editor de textos sirve, por que a fin de cuentas éste también es un editor de texto (lo que tiene Visual Studio Code, así como Dreamweaver o Notepad++ es que tienen atajos rápidos útiles para crear código web y "correctores/sugerencias ortográficas de código")</p>
+                
+                <!-- ETIQUETAS -->
+                <h3>Hacer un archivo html y utilizar algunas etiquetas...</h3>
+                <p>Éstas etiquetas significan:</p>
+                    <ul>
+                        <li><b>p</b> - párrafo</li>
+                        <li><b>h1, h2, h3...</b> - headings, encabezados, hay del 1 al 6</li>
+                        <li><b>img</b> - imagen</li>
+                        <li><b>ul</b> - lista desordenada</li>
+                        <li><b>li</b> - elemento dentro de la lista</li>
+                    </ul>
+                
+                <p>
+                    <span class="highlight">La mayoría de las etiquetas</span> 
+                    (como por ejemplo, h1, h2, h..., p, ul, li, entre otras), 
+                    <span class="highlight">tienen apertura y cierre</span>
+                </p>
+                <pre><code class="language-css">
+    &lt;p>texto aquí&lt;/p>
+    &lt;h1>texto aquí&lt;/h1>
+                </code></pre>
+
+                <!-- PIQUE lorem -->
+                <p class="shh">
+                    Pique:<br>
+                    En Visual Studio Code, al escribir Lorem aparece la opción para que se autoescriba un texto lorem como en el siguiente párrafo:<br>
+                    <pre><code class="language-css">&lt;p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, sed! Sequi, sed illo voluptates ut labore earum error iste quis laudantium odio qui corporis. Repellat repellendus asperiores earum delectus impedit.&lt;/p></code></pre>
+                </p>
+                <h3>Colocando una imagen</h3>
+                <p>
+                    Para indicar que queremos colocar una imagen usamos la <span class="highlight">etiqueta img</span>, dentro de ella podemos poner el atributo alt, que sirve por ejemplo para usar en dispositivos de gente que no tiene buena audición o visión y necesita que el dispositivo lea lo que hay en la web, también es útil para que los motores de búsqueda puedan identificar cual es el contenido que hay en el sitio y que relevancia tiene.<br>
+                    <br>
+                    Ésta etiqueta se usa de la siguiente forma:<br>
+                    <pre><code class="language-css">&lt;img src="https://aquí-la-url-de-la-imagen-o-su-ruta.jpg" alt="breve descripcion"></code></pre>
+                </p>
+                <p>
+                    Ésta etiqueta <span class="highlight">no tiene cierre</span>, solo se abre y listo.<br>
+                    <span class="shh">Yo le agregué unos atributos más, como el borde redondeado, sólido y de color negro, tuve que aclararle la medida del ancho y me quedó así:</span>
+                </p>
+                <img src="https://png.pngtree.com/thumb_back/fw800/background/20230408/pngtree-sky-colorful-clouds-fantasy-background-image_2136866.jpg" alt="fantasy sky">
                 <br>
-                Ésta etiqueta se usa de la siguiente forma:<br>
-                <pre><code class="language-css">&lt;img src="https://aquí-la-url-de-la-imagen-o-su-ruta.jpg" alt="breve descripcion"></code></pre>
-            </p>
-            <p>
-                Ésta etiqueta <span class="highlight">no tiene cierre</span>, solo se abre y listo.<br>
-                <span class="shh">Yo le agregué unos atributos más, como el borde redondeado, sólido y de color negro, tuve que aclararle la medida del ancho y me quedó así:</span>
-            </p>
-            <img src="https://png.pngtree.com/thumb_back/fw800/background/20230408/pngtree-sky-colorful-clouds-fantasy-background-image_2136866.jpg" alt="fantasy sky">
-            <br>
-            <h3>Escribimos una lista desordenada:</h3>
-            <p>El código para ésta es:</p>
-            <pre><code class="language-css">
-    &lt;ul>
-    &lt;li>Aquí ponemos un elemento &lt;/li>
-    &lt;li>Aquí el elemento siguiente &lt;/li>
-    &lt;li>Y el último elemento &lt;/li>
-    &lt;/ul></code>
-            </pre>
-            <br>
-            <p>Y luce de ésta manera:</p>
+                <h3>Escribimos una lista desordenada:</h3>
+                <p>El código para ésta es:</p>
+                <pre><code class="language-css">
+        &lt;ul>
+        &lt;li>Aquí ponemos un elemento &lt;/li>
+        &lt;li>Aquí el elemento siguiente &lt;/li>
+        &lt;li>Y el último elemento &lt;/li>
+        &lt;/ul></code>
+                </pre>
+                <br>
+                <p>Y luce de ésta manera:</p>
                 <ul>
                     <li>Aquí ponemos un elemento </li>
                     <li>Aquí el elemento siguiente </li>
                     <li>Y el último elemento </li>
                 </ul>
+            </div><!-- finaliza closedChapter-->
         </div>
 
         <!-- Estructura del html y sus etiquetas -->
-        <div id="clase2">
+        <div id="clase2" class="chapter">
             
-            <h1>Estructuras</h1>
+            <div> <!-- title -->
+                <h1>Estructuras</h1>
+            </div>
 
-            <h3>Declaración HTML</h3>
-            <pre><code class="language-css">&lt;!DOCTYPE html>
-    Aquí en medio va todo el contenido del documento html
-    &lt;/html></code></pre>
-            <p>
-                Si bien luce como una etiqueta, en realidad es una declaración, ésta se coloca al inicio y se pone una de cierre al final del documento.<br>
-                <span class="highlight">Sirve para decirle al navegador que clase de archivo está leyendo</span>, para que pueda leerlo correctamente
-            </p>
-            <p>
-                Según Wikipedia una declaración es:<br>
-                <blockquote>
-                    Una declaración de tipo de documento o DOCTYPE (del inglés document type declaration) asocia un documento SGML o XML particular con una definición de tipo de documento.<br>
-                    <a target="_blank" href="https://es.wikipedia.org/wiki/Declaraci%C3%B3n_de_tipo_de_documento">Wikipedia</a>
-                </blockquote>
-            </p>
-            <br>
-            <h3>etiquetas Meta</h3>
-            <pre><code class="language-css">&lt;meta charset="UTF-8"></code></pre>
-            <p>
-                Son metadatos, metainformación, <span class="highlight">brindan información sobre el documento</span>, por ejemplo meta charset se refiere a la codificación de caracteres.<br>
-                En el siguiente enlace puedes encontrar más información sobre ellas <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/HTML/Element/meta">este enlace</a>
-            </p>
-            <br>
-            <h3>Title</h3>
-            <pre><code class="language-css">&lt;title>senpai project&lt;/title></code></pre>
-            <p>Es el texto que aparece en la pestaña del navegador</p>
-            <br>
-            <h3>Comentarios</h3>
-            <pre><code class="language-css">&lt;!-- esto es un comentario --&gt</code></pre>
-
+            <div>
+                <h3>Declaración HTML</h3>
+                <pre><code class="language-css">&lt;!DOCTYPE html>
+        Aquí en medio va todo el contenido del documento html
+        &lt;/html></code></pre>
+                <p>
+                    Si bien luce como una etiqueta, en realidad es una declaración, ésta se coloca al inicio y se pone una de cierre al final del documento.<br>
+                    <span class="highlight">Sirve para decirle al navegador que clase de archivo está leyendo</span>, para que pueda leerlo correctamente
+                </p>
+                <p>
+                    Según Wikipedia una declaración es:<br>
+                    <blockquote>
+                        Una declaración de tipo de documento o DOCTYPE (del inglés document type declaration) asocia un documento SGML o XML particular con una definición de tipo de documento.<br>
+                        <a target="_blank" href="https://es.wikipedia.org/wiki/Declaraci%C3%B3n_de_tipo_de_documento">Wikipedia</a>
+                    </blockquote>
+                </p>
+                <br>
+                <h3>etiquetas Meta</h3>
+                <pre><code class="language-css">&lt;meta charset="UTF-8"></code></pre>
+                <p>
+                    Son metadatos, metainformación, <span class="highlight">brindan información sobre el documento</span>, por ejemplo meta charset se refiere a la codificación de caracteres.<br>
+                    En el siguiente enlace puedes encontrar más información sobre ellas <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/HTML/Element/meta">este enlace</a>
+                </p>
+                <br>
+                <h3>Title</h3>
+                <pre><code class="language-css">&lt;title>senpai project&lt;/title></code></pre>
+                <p>Es el texto que aparece en la pestaña del navegador</p>
+                <br>
+                <h3>Comentarios</h3>
+                <pre><code class="language-css">&lt;!-- esto es un comentario --&gt</code></pre>
+            </div>
         </div>
 
         <!-- Clase 3 - Pequeña prueba -->
 
         <!-- Lectua depurar html -->
-        <div id="clase4">
-            <h2>Lectura depurar html</h2>
-            <p>Aquí hay un artículo para leer desde la web de <b>MDN Web Docs de Mozilla:</b> <a target="_blank" href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">link aquí</a></p>
+        <div id="clase4" class="chapter">
+            <div> <!-- title -->
+                <h2>Lectura depurar html</h2>    
+            </div>
+            
+            <div> <!-- content -->
+                <p>Aquí hay un artículo para leer desde la web de <b>MDN Web Docs de Mozilla:</b> <a target="_blank" href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">link aquí</a></p>
 
-            <p>En esta lectura recomiendan una <span class="highlight">aplicación web</span> muy útil, que sirve <span class="highlight">para validar etiquetas</span>, por ejemplo, te avisa donde te olvidaste de cerrar alguna etiqueta o si hay alguna que la cerraste doble, es una web de <b>W3Schools</b>, <a target="_blank" href="https://validator.w3.org/">este es el link</a></p>
+                <p>En esta lectura recomiendan una <span class="highlight">aplicación web</span> muy útil, que sirve <span class="highlight">para validar etiquetas</span>, por ejemplo, te avisa donde te olvidaste de cerrar alguna etiqueta o si hay alguna que la cerraste doble, es una web de <b>W3Schools</b>, <a target="_blank" href="https://validator.w3.org/">este es el link</a></p>
+            </div>
         </div>
 
         <!-- Referencia de elementos HTML -->
-        <div id="clase5">
-            <h1>Referencia de elementos HTML</h1>
-            <p>Aquí brindan información, también de la página de <b>Mozilla MDN Web Docs</b>, que hablan sobre las etiquetas HTML que existen, <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/HTML/Element">este es el link</a></p>
-            <br>
-            <p>Otro sitio que tiene bastante información sobre las etiquetas HTML que existen es <b>W3Schools</b> <a href="https://www.w3schools.com/html/default.asp">este es el link</a></p>
+        <div id="clase5" class="chapter">
+            <div> <!-- title -->
+                <h1>Referencia de elementos HTML</h1>   
+            </div>
+            
+            <div> <!-- content -->
+                <p>Aquí brindan información, también de la página de <b>Mozilla MDN Web Docs</b>, que hablan sobre las etiquetas HTML que existen, <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/HTML/Element">este es el link</a></p>
+                <br>
+                <p>Otro sitio que tiene bastante información sobre las etiquetas HTML que existen es <b>W3Schools</b> <a href="https://www.w3schools.com/html/default.asp">este es el link</a></p>
+            </div>
         </div>
 
         <!-- Semántica HTML -->
-        <div id="clase6">
-            <h1>Semántica HTML</h1>
+        <div id="clase6" class="chapter">
+            <div> <!-- title -->
+                <h1>Semántica HTML</h1>
+            </div>
 
-            <p>Los html <span class="highlight">tienen que explicarse a si mismo, tienen que ser descriptivos en sus etiquetas</span>, esto <b>es útil para quienes usan dispositivos con diversos tipos de accesibilidad</b>, por ejemplo, personas visión reducida.</p>
-            <p>También es importante para los <b>motores de búsqueda</b>, por ejemplo, la etiqueta main determina que es lo más importante dentro de esa página, a diferencia de div que es una división no tan importante, los motores de búsqueda le van a dar más relevancia por ejemplo a la etiqueta main.</p>
-            <p>Ser claros al momento de escribir el código también nos ayuda a nosotros mismos a <b>entendernos</b> cuando vamos a abrir el documento, para saber que quisimos hacer, y en caso de trabajar en un equipo también ayuda a nuestros compañeros o colaboradores a entendernos entre todos.</p>
-
+            <div> <!-- content -->
+                <p>Los html <span class="highlight">tienen que explicarse a si mismo, tienen que ser descriptivos en sus etiquetas</span>, esto <b>es útil para quienes usan dispositivos con diversos tipos de accesibilidad</b>, por ejemplo, personas visión reducida.</p>
+                <p>También es importante para los <b>motores de búsqueda</b>, por ejemplo, la etiqueta main determina que es lo más importante dentro de esa página, a diferencia de div que es una división no tan importante, los motores de búsqueda le van a dar más relevancia por ejemplo a la etiqueta main.</p>
+                <p>Ser claros al momento de escribir el código también nos ayuda a nosotros mismos a <b>entendernos</b> cuando vamos a abrir el documento, para saber que quisimos hacer, y en caso de trabajar en un equipo también ayuda a nuestros compañeros o colaboradores a entendernos entre todos.</p>
+            </div>
         </div>
 
         <!-- Clase 7 - Pequeña prueba -->
 
-        <!-- Clase 8 - Ejercicio -->
+        <!-- Clase 8 - Ejercicio // usar main, footer, header // vdrr89 arreglar acá -->
 
     </section>
 
     <!-- Code Style -->
     <script src="prism.js"></script>
+
+    <!-- My JS -->
+    <script src="main.js"></script>
 
 </body>

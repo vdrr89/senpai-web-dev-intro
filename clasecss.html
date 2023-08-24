@@ -18,81 +18,293 @@
 </head>
 <body>
 
-    <section id="header">
-        <h1>Notas de un curso de Web Development</h1>
-        <h2>Es un mini curso introductorio de Senpai</h2>
-    </section>
-
     <section id="clasesCSS">
-
+        
         <h1>Clases CSS</h1>
 
         <!-- Clase 1 - CSS Introducción: Selectores -->
-        <div id="clase1css">
-            <h2>CSS Introducción: selectores</h2>
-            <p>En esta clase se explica como usar CSS dentro de la etiqueta head, aunque también se puede usar CSS en otro archivo aparte para luego "linkearlo" dentro de la etiqueta head.</p>
-            <p class="grayblock">Dentro del archivo <span class="highlight">html</span>, dentro de la etiqueta <span class="highlight">head</span>, creamos una etiqueta <span class="highlight">style</span>, y dentro de eésta, elegimos un selector, por ejemplo p ó h1 y le asignamos un color, un tamaño de fuente.</p>
-            <img src="https://www.w3schools.com/css/img_selector.gif" alt="css nombres" style="border: none; border-radius: 0; margin: 1em 0;">
-            <p><span class="highlight">En css se puede sobreescribir</span>, osea, el navegdor va leyendo desde arriba hacia abajo, si primero le damos un color a p, y luego le damos otro color a p, finalemente se va a mostrar el último color</p>
-            <p>Los selectores pueden ser etiquetas, clases, id</p>
-            <p>En clase se hizo así:</p>
-            <pre><code class="language-css">
-&lt;!DOCTYPE html>
-    &lt;head>
-        &lt;title>Aquí va el title&lt;/title>
-        &lt;style>  &lt;!-- Acá ponemos la etiqueta style y dentro el estilo --&gt
-            body {
-                background-color: lightblue;
-            }
-                
-            h1 {
-                color: navy;
-                margin-left: 20px;
-            }
-        &lt;/style>
-    &lt;/head>
+        <div id="clase1css" class="chapter">
+            <div> <!-- title -->
+                <h2>CSS Introducción: selectores</h2>   
+            </div>
+            <div> <!-- content -->
+                <p>En esta clase se explica como usar CSS dentro de la etiqueta head, aunque también se puede usar CSS en otro archivo aparte para luego "linkearlo" dentro de la etiqueta head.</p>
+                <p class="grayblock">Dentro del archivo <span class="highlight">html</span>, dentro de la etiqueta <span class="highlight">head</span>, creamos una etiqueta <span class="highlight">style</span>, y dentro de eésta, elegimos un selector, por ejemplo p ó h1 y le asignamos un color, un tamaño de fuente.</p>
+                <img src="https://www.w3schools.com/css/img_selector.gif" alt="css nombres" style="border: none; border-radius: 0; margin: 1em 0;">
+                <p><span class="highlight">En css se puede sobreescribir</span>, osea, el navegdor va leyendo desde arriba hacia abajo, si primero le damos un color a p, y luego le damos otro color a p, finalemente se va a mostrar el último color</p>
+                <p>Los selectores pueden ser etiquetas, clases, id</p>
+                <p>En clase se hizo así:</p>
+                <pre><code class="language-css">
+    &lt;!DOCTYPE html>
+        &lt;head>
+            &lt;title>Aquí va el title&lt;/title>
+            &lt;style>  &lt;!-- Acá ponemos la etiqueta style y dentro el estilo --&gt
+                body {
+                    background-color: lightblue;
+                }
+                    
+                h1 {
+                    color: navy;
+                    margin-left: 20px;
+                }
+            &lt;/style>
+        &lt;/head>
 
-    &lt;body>
-        &lt;p>Aquí va todo el body&lt;/p>
-    &lt;/body>
-&lt;/html>
+        &lt;body>
+            &lt;p>Aquí va todo el body&lt;/p>
+        &lt;/body>
+    &lt;/html>
 
-            </code></pre>
-            <br>
-            <p>También se puede hacer así:</p>
-            <pre><code class="language-css">
-&lt;!DOCTYPE html>
-    &lt;head>
-        &lt;link rel="stylesheet" href="aquí-la-ruta-y-nombre-del-archivo.css"> &lt;!-- aquí se "linkea" el otro documento que contiene el css --&gt
-        &lt;title>Aquí va el title&lt;/title>
-    &lt;/head>
+                </code></pre>
+                <br>
+                <p>También se puede hacer así:</p>
+                <pre><code class="language-css">
+    &lt;!DOCTYPE html>
+        &lt;head>
+            &lt;link rel="stylesheet" href="aquí-la-ruta-y-nombre-del-archivo.css"> &lt;!-- aquí se "linkea" el otro documento que contiene el css --&gt
+            &lt;title>Aquí va el title&lt;/title>
+        &lt;/head>
 
-    &lt;body>
-        &lt;p>Aquí va todo el body&lt;/p>
-    &lt;/body>
-&lt;/html>
-            </code>
-            </code></pre>
+        &lt;body>
+            &lt;p>Aquí va todo el body&lt;/p>
+        &lt;/body>
+    &lt;/html>
+                </code>
+                </code></pre>
+
+                <h3>Comentarios</h3>
+                <p>Los comentarios se escriben con /* y cerrandose con */ de esta forma:</p>
+                <pre><code class="language-css">/* Comentario aquí */</code></pre>
+
+                <h3>Que puede servir de selector?</h3>
+                <p>
+                    Pueden servir las etiquetas, como un p o un ul,<br>
+                    Pueden servir las clases, que se escriben con un punto delante, por ejemplo, para la clase titulos se escribiría .titulos<br>
+                    Pueden servir los id de los elementos, que se escriben con un # delante, por ejemplo, si el id se llama contenido1, el selector se escribe #contenido1
+                </p>
+                <pre><code class="language-css">
+p{
+    color: red;
+}
+
+.titulos{
+    font-size: 24px;
+}
+
+#contenido1{
+    border: 1px solid coral;
+}
+                </code></pre>
+                <p>Estos selectores funcionan, debido a que tienen su referencia en el html, por ejemplo, todos los p van a cumplir las propiedades que se escribieron en el CSS, todas las etiquetas que tengan la clase titulos y los id contenido1 van a cumplir las propiedades que se les asignó en el CSS.</p>
+
+                <h3>Como asigno los selectores class e id en el html?</h3>
+                <p>
+                    Las etiquetas como p ul img ya al escribirlas quedan designadas, las clases se colocan dentro de cada etiqueta en la siguiente forma:
+                </p>
+                <pre><code class="language-css">
+&lt;p class="aquiLaClase">Aquí el contenido del párrafo&lt;/p>
+                </code></pre>
+                <p>Los identificadores (id) se colocan de forma silimar:</p>
+                <pre><code class="language-css">
+&lt;div id="aquiElIdentificador">&lt;/div>
+                </code></pre>
+            </div>
+        </div>
+
+        <!-- Clase 2 - CSS Preguntas de práctica de clase -->
+
+        <!-- Clase 3 - CSS Ejercicio de práctica -->
+        <div id="clase3css" class="chapter">
+
+            <div><!-- titulo -->
+                <h2>Ejercicio de práctica</h2>
+            </div>
+
+            <div><!-- contenido -->
+                <p>Hacer un HTML con varios elementos y aplicarle las propiedades:</p>
+                <ul>
+                    <li>Color</li>
+                    <li>Width</li>
+                    <li>Height</li>
+                    <li>background-color</li>
+                    <li>border-radius</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Clase 4 - CSS Valores y unidades en CSS -->
+        <div id="clase4css" class="chapter">
+
+            <div><!-- titulo -->
+                <h2>Valores y Unidades en CSS</h2>
+            </div>
+            <div> <!-- contenido -->
+                <p>
+                    Recomiendan leer este artículo <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Values_and_units">→ link aquí ←</a>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Clase 5 - CSS Colores -->
+        <div id="clase5css" class="chapter">
+
+            <div><!-- titulo -->
+                <h2>Colores</h2>
+            </div>
+
+            <div><!-- contenido -->
+                Recomiendan leer este artículo: <a href="https://developer.mozilla.org/es/docs/Web/CSS/color_value"> → aquí el link ←</a>
+            </div>
 
         </div>
 
         <!-- Pique1CSS - fuentes y colores web source -->
-        <div id="pique1css">
-            <h2>Pique (fuentes y colores web):</h2>
-            <p>Alugnos lugares donde se pueden conseguir fuentes es por ejemplo <a href="https://fonts.google.com/">Google Fonts</a><br>
-            Y para conseguir colores web, en formato hexadecimal se pueden encontrar en <a href="https://www.w3schools.com/colors/colors_picker.asp">una aplicación de W3Schools</a></p>
+        <div id="pique1css" class="chapter">
+            <div> <!-- title -->
+                <h2>Pique (fuentes y colores web):</h2>
+            </div>
+            <div> <!-- content -->
+                <!-- Colores Hexadecimales info -->
+                <div id="coloresHexadecimales" class="divNoDeco">
+                    <h3>Colores Hexadecimales</h3>
+                    <p>Los colores hexadecimales tienen 6 digitos y se conforman así:</p>
+                    <pre><code class="language-css">#aabf19</code></pre>
+                    <p>
+                        van desde el 0 hasta el 9 y continúa con la a hasta la f</br>
+                        se dividen de a 2 dígitos aa bb cc<br>
+                        siendo éstos r g b (red, green blue), ( #rrggbb )<br>
+                        cuando éstos grupos tienen la misma letra se pueden resumir a 3 dígitos, por ejemplo
+                    </p>
+                    <pre><code class="language-css">#aabbcc = #abc</code></pre>
+                    <p><b>referencia:</b> el 000 blanco y la fff negro</p>
+                    <p>Para agregarle transparecnia se le agregan 2 números al finalizar el color</p>
+                    <pre><code class="language-css">#aabbcc80</code></pre>
+                </div>
+
+                <!-- Colores RGB info -->
+                <div id="coloresRGB" class="divNoDeco">
+                    <h3>RGB</h3>
+                    <p>
+                        RGB = Red Green Blue<br>
+                        <span class="highlight">Se usa para pantallas</span>, se emite através de la luz<br>
+                        La combinación de estos colores forma el blanco, y la ausencia de los mismos el negro.
+                    </p>
+                    <img style="max-width: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Synthese%2B.svg/119px-Synthese%2B.svg.png" alt="colores-rgb">
+                    <p>Se puede incluir RGB con transparencia, lo cual sería RGBA</p>
+                    <pre><code class="language-css">
+    rgba(red, green, blue, alpha)
+    rgba(255, 99, 71, 0.5)
+                    </code></pre>
+                    
+                </div>
+
+                <!-- vdrr89  -->
+                <!-- Fuentes info -->
+                <div id="fuentes" class="divNoDeco">
+
+                </div>
+
+                <!-- Colores y fuentes Resources -->
+                <div id="coloresFuentesResources" class="divNoDeco">
+                    <p>Acá hay más información sobre colores web:</p>
+                    <ul>
+                        <li><a href="https://es.wikipedia.org/wiki/Colores_web">Colores Web en Wikipedia</a></li>
+                        <li><a href="https://www.w3.org/TR/css-color-3/#html4">colores en CSS en W3Schools</a></li>
+                        <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/color">Colores en MDN Mozilla</a></li>
+                        <li><a href="https://uxdesign.cc/color-effect-b78fae8bb72f">Psicología del color y UX para diseño web by UX Collective</a></li>
+                    </ul>    
+                    
+                    <p>
+                        Alugnos lugares donde se pueden conseguir fuentes es por ejemplo <a href="https://fonts.google.com/">Google Fonts</a><br>
+                        Y para conseguir colores web, en formato hexadecimal se pueden encontrar en <a href="https://www.w3schools.com/colors/colors_picker.asp">una aplicación de W3Schools</a>
+                    </p>
+                </div>
+
+                <!-- vdrr89 // add -->
+                <!-- Instalar y usar fuentes -->
+
+                <!-- vdrr89 // add -->
+                <!-- Extra - Variables para color y fuentes -->
+            </div>
         </div>
+
+        <!-- Clase 6 - CSS Cascada Herencia y Especificidad -->
+        <div id="clase6css" class="chapter">
+            
+            <div><!-- titulo -->
+                <h2>Cascada, Herencia y Especificidad</h2>
+            </div>
+
+            <div><!-- contenido -->
+                <h3>Cascada</h3>
+                <p>
+                    La cascada implica que el orden importa <br>
+                    El que se visualiza finalmente es la declaración que se encuentre por debajo, <br>
+                    Estos documentos leen como nosotros, de izquierda a derecha y de arriba hacia abajo.<br>
+                    <br>
+                    Por ejemplo si a la etiqueta p le asignamos un color, luego escribimos más código, y luego a la misma etiqueta p le asignamos otro color, se mostrará el último color asignado.
+                </p>
+
+                <h3>Especificidad</h3>
+                <p>
+                    Se refiere a que si son específicos, tiene más peso que los demás, sea que estén escritos por debajo o encima.
+                </p>
+                <h3>Orden dentro de la especificidad</h3>
+                <ul>
+                    <li>id</li>
+                    <li>class</li>
+                    <li>p</li>
+                </ul>
+                <p>Recomiendan leer este artículo sobre especificidad: <a href="https://developer.mozilla.org/es/docs/Web/CSS/Specificity">→ link aquí ←</a></p>
+
+                <h3>Herencia</h3>
+                <p>
+                    El elemento padre hereda sus propiedades a los elementos hijos,<br>
+                    No todas las propiedades son heredables.<br>
+                    <br>
+                    Por ejemplo si asignamos un color a una ul, las li van a adquirir ese color, <br>
+                    Sin embargo, si le asignamos un color a una li, la ul <b>no</p> las hereda. 
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Clase 7 - CSS Preguntas de práctica -->
+
+        <!-- Clase 8 - CSS Link a Especificidad -->
+
+        <!-- Clase 9 - CSS Cascada y Herencia -->
+        <div id="clase9css" class="chapter">
+            <div><!-- titulo -->
+                <h2>Cascada y Herencia</h2>
+            </div>
+            <div><!-- contenido -->
+
+            </div>
+        </div>
+
+        <!-- vdrr89 // fix // to do -->
+        <!-- Clase 10 - CSS Modelo de c -->
+        <!-- clase 11 - CSS Preguntas prácticas -->
+        <!-- clase 12 - CSS Modelo de Caja CSS -->
+        <!-- clase 13 - CSS Flexbox -->
+        <!-- clase 14 - CSS Preguntas prácticas -->
+        <!-- clase 15 - CSS Completa los 4 desfíos -->
+        <!-- clase 16 - CSS Ejemplo de flex -->
+        <!-- clase 17 - CSS Grid -->
+        <!-- clase 18 - CSS Ejemplos flex -->
+        <!-- clase 19 - CSS Congrats -->
 
     </section>
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>Creado por vdrr89 en base a clases introductorias gratuitas de Senpai (Uruguay) + conocimientos propios y lecturas varias de internet.<br>
-        <a href="mailto:vdrr89@gmail.com">vdrr89@gmail.com</a> | <a target="_blank" href="github.com/vdrr89">Github</a> | <a target="_blank" href="linkedin.com/in/veronicaromero89">Linkedin</a></p>
-    </div>
-
     <!-- Code Style -->
     <script src="prism.js"></script>
+
+    <!-- My JS -->
+    <script src="main.js"></script>
 
 </body>
 </html>

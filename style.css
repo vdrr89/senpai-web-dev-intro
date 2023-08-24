@@ -8,9 +8,6 @@ html, body{
     position: relative;
 }
 
-body{
-}
-
 .allBackground{
     z-index:-10;
     background-color: #fcf7ed;
@@ -32,7 +29,8 @@ iframe{
     background-color: skyblue;
 }
 
-section div{
+/* vdrr89 // arreglar el kilombo de los divs */
+.chapter{
     margin: 10%;
     padding: 10%;
 
@@ -40,6 +38,17 @@ section div{
     border-radius: 5em;
     background-color: white;
 }
+
+/*
+.closedChapter{
+    display: none;
+}
+
+
+.openChapter{
+    display: block;
+}
+*/
 
 .welcome{
     margin: 10%;
