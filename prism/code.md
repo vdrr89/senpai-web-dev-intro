@@ -1,8 +1,11 @@
 # Cada vez que ingresamos código a mostrar:
 
-## Poner dentro del body:
+## Poner dentro del body: (uno solo de los siguientes (de acuerdo a su langage))
 ```
+<pre><code class="language-html"></code></pre>
 <pre><code class="language-css"></code></pre>
+<pre><code class="language-js"></code></pre>
+
 ```
 **Al escribir < dentro de esta sección usar:**
 ```

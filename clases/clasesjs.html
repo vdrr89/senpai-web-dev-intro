@@ -1,0 +1,193 @@
+<!-- CLASES JavaScript -->
+<!-- cualqueiri cosa buscar vdrr89 fix -->
+
+<head>
+    <!-- My styles -->
+    <link rel="stylesheet" type="text/css" href="../style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=family=Raleway:ital,wght@0,200;0,400;0,800;1,200;1,400;1,800&display=swap" rel="stylesheet">
+
+    <!-- Code Style -->
+	<link href="../prism/prism.css" rel="stylesheet" />
+</head>
+<body>
+
+    <main> <!-- clases JS -->
+
+        <!-- clase1 - JS JavaScript Intro -->
+        <div id="clase1js" class="chapter">
+            <h2>JavaScript Intro</h2> <!-- titulo -->
+            <p>Nos muestran unos ejemplos que tienen guardado en su Github: <a href="https://github.com/senpai-academy">→ link aquí ←</a></p>
+            <br>
+            <h3>Valores primitivos:</h3>
+            <pre><code class="language-js">
+    //Números
+    1
+    2
+    3
+
+    //String
+    un texto
+
+    //Booleanos
+    true
+
+    // Nada, Vacío
+    null
+    undefinded
+
+    Symol("mi-simbolo")
+
+    // Objetos:
+
+    [1, 2, 3]
+
+    // Arreglos:
+    {nombre: Vero, edad: 33}
+            </code></pre>
+            <br>
+            <br>
+            <h3>Operadores</h3>
+            <pre><code class="language-js">
+    // Operadores Aritméticos
+    // + - * % **
+    3+4;
+    43-1;
+
+    //Concatenar
+    "Verónica" + "Romero";
+
+    // Operadores de comparación
+    // &lt; > &lt;= >= == != !==
+    3&lt;4; // true
+    3>4; // false
+
+    // Operadores Lógicos - Para comparar booleanos
+    // && || !
+    true && false; // false - se llama and
+    true || false; // true - se llama or
+    !true; // false - se llama not o nor
+
+    // Operadores de Asignación
+    // = += *= /= %=
+            </code></pre>
+            <br>
+            <br>
+            <h3>Variables</h3>
+            <p>Una variable podríamos pensarla como una cajita, con un nombre y un contenido</p>
+            <pre><code class="language-js">
+    // Declarar una variable
+    // let var const
+    let nombre;
+
+    // Asignar un valor a una variable
+    nombre = "Veronica";
+
+    //Declara y asignar un valor a una Variables
+    let edad = 33;
+
+    // Declarar una variable const
+    const pi = 3.14;
+
+    // No podemos reasignar un valor a una variable declarada con const
+    pi = 3.15; // Error
+
+    // Hacer y ver un arreglo
+    let amigos = ["fulano", "mengano", "sultano"];
+    //es un arreglo con 3 valores, para acceder a uno de estos valores...
+
+    console.log(amigos[0]); // Fulano
+    console.log(amigos[1]); // Mengano
+    console.log(amigos[2]); // Sultano
+    console.log(amigos[3]); // undefinded
+
+    console.log(amigos.length); // 3
+
+    // Hacer y ver un Objeto
+    let persona = {nombre: Veronica, edad: 33, algo:true}
+
+    console.log(persona.nombre) // Veronica
+    console.log(persona.edad) // 33
+            </code></pre>
+            <br>
+            <br>
+            <h3>Reglas de nombrado de variables</h3>
+            <ul>
+                <li>El nombre de la variable debe comenzar con una letra o un guión bajo (pero no un número)</li>
+                <li>El nombre de la variable solo puede contener caracteres alfanuméricos y guies bajos</li>
+                <li>Los nombres de las variables son sensibles a mayúsculas y miníscuilas</li>
+                <li>El nombre de la variable no puede ser una palabra reservada</li>
+            </ul>
+            <br>
+            <br>
+            <h3>Control de flujo</h3>
+            <pre><code class="language-js">
+    let edad = 33;
+
+    if(edad >= 18){
+        console.log("Es mayor de edad");
+    } else { // el else es opcional
+        console.log("Es menor de edad"); 
+    }
+            </code></pre>
+            <br>
+            <br>
+            <h3>Funciones</h3>
+            <pre><code class="language-js">
+    function saludar(nombre){
+        console.log("hola " + nombre);
+    }
+
+    function sumar(a, b){
+        return a + b;
+    }
+
+    let resultado = sumar(3, 4);
+            </code></pre>
+        </div>
+
+        <!-- clase2 - JS Ejercicio de practica -->
+
+        <!-- clase3 - JS Pregutnas de practica -->
+
+        <!-- clase4 - JS Operador Typeof -->
+        <div id="clase4js" class="chapter">
+            <h2>Operador Typeof</h2>
+            <p>Recomiendan leer este artículo <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/typeof">→ link aquí ←</a></p>
+        </div>
+        
+        <!-- clase5 - JS DOM -->
+        <div id="clase5js" class="chapter">
+            <p>Recomiendan leer este artículo <a href="https://developer.mozilla.org/es/docs/Glossary/DOM">→ link aqui ←</a></p>
+        </div>
+
+        <!-- clase6 - JS addEventListener -->
+        <div id="clase6js" class="chapter">
+            <p>Recomiendan leer este artículo <a href="https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener">→ link aquí ←</a></p>
+        </div>
+
+        <!-- clase7 - JS Control de flujo -->
+        <div id="clase7js" class="chapter">
+            
+        </div>
+
+        <!-- clase8 - JS Zip descargable -->
+
+        <!-- clase9 - JS Ejercicio de Práctica de Clase -->
+
+        <!-- clase10 - JS Despedida -->
+
+    </main>
+
+    <!-- Code Style -->
+    <script src="../prism/prism.js"></script>
+
+    <!-- codepen -->
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+    <!-- My JS -->
+    <script src="../main.js"></script>
+</body>

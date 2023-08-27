@@ -3,7 +3,7 @@
 
 <head>
     <!-- My styles -->
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,12 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=family=Raleway:ital,wght@0,200;0,400;0,800;1,200;1,400;1,800&display=swap" rel="stylesheet">
 
     <!-- Code Style -->
-	<link href="prism.css" rel="stylesheet" />
+	<link href="../prism/prism.css" rel="stylesheet" />
 </head>
 
 <body>
     <!-- CLASES HTML -->
-    <section id="clasesHTML">
+    <main id="clasesHTML">
 
         <p class="welcome">Hola! Soy Verónica, aquí tengo algunas notas sobre un <b>curso introductorio de Web Development</b> que estoy tomando en <b>Senpai.</b></p>
 
@@ -42,7 +42,7 @@
                 <!-- TO DO -->
                 <div class="grayblock">
                     <p>Instalar Visual Studio Code, hacer un archivo html y usar las etiquetas: </p>
-                    <pre><code class="language-css">&lt;h1> &lt;p> &lt;h3> &lt;img> &lt;ul> &lt;li></code></pre><br>
+                    <pre><code class="language-html">&lt;h1> &lt;p> &lt;h3> &lt;img> &lt;ul> &lt;li></code></pre><br>
                 </div>
 
                 <!-- INSTALAR VSC -->
@@ -66,7 +66,7 @@
                     (como por ejemplo, h1, h2, h..., p, ul, li, entre otras), 
                     <span class="highlight">tienen apertura y cierre</span>
                 </p>
-                <pre><code class="language-css">
+                <pre><code class="language-html">
     &lt;p>texto aquí&lt;/p>
     &lt;h1>texto aquí&lt;/h1>
                 </code></pre>
@@ -75,14 +75,14 @@
                 <p class="shh">
                     Pique:<br>
                     En Visual Studio Code, al escribir Lorem aparece la opción para que se autoescriba un texto lorem como en el siguiente párrafo:<br>
-                    <pre><code class="language-css">&lt;p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, sed! Sequi, sed illo voluptates ut labore earum error iste quis laudantium odio qui corporis. Repellat repellendus asperiores earum delectus impedit.&lt;/p></code></pre>
+                    <pre><code class="language-html">&lt;p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, sed! Sequi, sed illo voluptates ut labore earum error iste quis laudantium odio qui corporis. Repellat repellendus asperiores earum delectus impedit.&lt;/p></code></pre>
                 </p>
                 <h3>Colocando una imagen</h3>
                 <p>
                     Para indicar que queremos colocar una imagen usamos la <span class="highlight">etiqueta img</span>, dentro de ella podemos poner el atributo alt, que sirve por ejemplo para usar en dispositivos de gente que no tiene buena audición o visión y necesita que el dispositivo lea lo que hay en la web, también es útil para que los motores de búsqueda puedan identificar cual es el contenido que hay en el sitio y que relevancia tiene.<br>
                     <br>
                     Ésta etiqueta se usa de la siguiente forma:<br>
-                    <pre><code class="language-css">&lt;img src="https://aquí-la-url-de-la-imagen-o-su-ruta.jpg" alt="breve descripcion"></code></pre>
+                    <pre><code class="language-html">&lt;img src="https://aquí-la-url-de-la-imagen-o-su-ruta.jpg" alt="breve descripcion"></code></pre>
                 </p>
                 <p>
                     Ésta etiqueta <span class="highlight">no tiene cierre</span>, solo se abre y listo.<br>
@@ -92,7 +92,7 @@
                 <br>
                 <h3>Escribimos una lista desordenada:</h3>
                 <p>El código para ésta es:</p>
-                <pre><code class="language-css">
+                <pre><code class="language-html">
         &lt;ul>
         &lt;li>Aquí ponemos un elemento &lt;/li>
         &lt;li>Aquí el elemento siguiente &lt;/li>
@@ -118,7 +118,7 @@
 
             <div>
                 <h3>Declaración HTML</h3>
-                <pre><code class="language-css">&lt;!DOCTYPE html>
+                <pre><code class="language-html">&lt;!DOCTYPE html>
         Aquí en medio va todo el contenido del documento html
         &lt;/html></code></pre>
                 <p>
@@ -134,18 +134,18 @@
                 </p>
                 <br>
                 <h3>etiquetas Meta</h3>
-                <pre><code class="language-css">&lt;meta charset="UTF-8"></code></pre>
+                <pre><code class="language-html">&lt;meta charset="UTF-8"></code></pre>
                 <p>
                     Son metadatos, metainformación, <span class="highlight">brindan información sobre el documento</span>, por ejemplo meta charset se refiere a la codificación de caracteres.<br>
                     En el siguiente enlace puedes encontrar más información sobre ellas <a target="_blank" href="https://developer.mozilla.org/es/docs/Web/HTML/Element/meta">este enlace</a>
                 </p>
                 <br>
                 <h3>Title</h3>
-                <pre><code class="language-css">&lt;title>senpai project&lt;/title></code></pre>
+                <pre><code class="language-html">&lt;title>senpai project&lt;/title></code></pre>
                 <p>Es el texto que aparece en la pestaña del navegador</p>
                 <br>
                 <h3>Comentarios</h3>
-                <pre><code class="language-css">&lt;!-- esto es un comentario --&gt</code></pre>
+                <pre><code class="language-html">&lt;!-- esto es un comentario --&gt</code></pre>
             </div>
         </div>
 
@@ -194,12 +194,12 @@
 
         <!-- Clase 8 - Ejercicio // usar main, footer, header // vdrr89 arreglar acá -->
 
-    </section>
+    </main>
 
     <!-- Code Style -->
-    <script src="prism.js"></script>
+    <script src="../prism/prism.js"></script>
 
     <!-- My JS -->
-    <script src="main.js"></script>
+    <script src="../main.js"></script>
 
 </body>
