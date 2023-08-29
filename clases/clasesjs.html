@@ -13,16 +13,23 @@
     <!-- Code Style -->
 	<link href="../prism/prism.css" rel="stylesheet" />
 </head>
-<body>
+<body class="allBackground">
 
+    <!-- HEADER -->
+    <iframe id="header-section" src="../general/header.html" frameborder="0" scrolling="no" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"></iframe>
+
+    <!-- CLASES JS -->
     <main> <!-- clases JS -->
 
         <!-- clase1 - JS JavaScript Intro -->
         <div id="clase1js" class="chapter">
+
             <h2>JavaScript Intro</h2> <!-- titulo -->
+
             <p>Nos muestran unos ejemplos que tienen guardado en su Github: <a href="https://github.com/senpai-academy">→ link aquí ←</a></p>
-            <br>
+
             <h3>Valores primitivos:</h3>
+            <!-- valores -->
             <pre><code class="language-js">
     //Números
     1
@@ -48,9 +55,9 @@
     // Arreglos:
     {nombre: Vero, edad: 33}
             </code></pre>
-            <br>
-            <br>
+
             <h3>Operadores</h3>
+            <!-- operadores -->
             <pre><code class="language-js">
     // Operadores Aritméticos
     // + - * % **
@@ -74,17 +81,17 @@
     // Operadores de Asignación
     // = += *= /= %=
             </code></pre>
-            <br>
-            <br>
+
             <h3>Variables</h3>
             <p>Una variable podríamos pensarla como una cajita, con un nombre y un contenido</p>
+            <!-- variables -->
             <pre><code class="language-js">
     // Declarar una variable
     // let var const
     let nombre;
 
     // Asignar un valor a una variable
-    nombre = "Veronica";
+    var nombre = "Veronica";
 
     //Declara y asignar un valor a una Variables
     let edad = 33;
@@ -112,8 +119,7 @@
     console.log(persona.nombre) // Veronica
     console.log(persona.edad) // 33
             </code></pre>
-            <br>
-            <br>
+
             <h3>Reglas de nombrado de variables</h3>
             <ul>
                 <li>El nombre de la variable debe comenzar con una letra o un guión bajo (pero no un número)</li>
@@ -121,9 +127,43 @@
                 <li>Los nombres de las variables son sensibles a mayúsculas y miníscuilas</li>
                 <li>El nombre de la variable no puede ser una palabra reservada</li>
             </ul>
-            <br>
-            <br>
-            <h3>Control de flujo</h3>
+
+        </div>
+
+        <!-- clase2 - JS Ejercicio de practica -->
+
+        <!-- clase3 - JS Pregutnas de practica -->
+
+        <!-- clase4 - JS Operador Typeof -->
+        <div id="clase4js" class="chapter">
+
+            <h2>Operador Typeof</h2> <!-- Operador Typeof -->
+            <p>Recomiendan leer este artículo <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/typeof">→ link aquí ←</a></p>
+        
+        </div>
+        
+        <!-- clase5 - JS DOM -->
+        <div id="clase5js" class="chapter">
+
+            <h2>DOM</h2><!-- DOM -->
+            <p>Recomiendan leer este artículo <a href="https://developer.mozilla.org/es/docs/Glossary/DOM">→ link aqui ←</a></p>
+        
+        </div>
+
+        <!-- clase6 - JS addEventListener -->
+        <div id="clase6js" class="chapter">
+
+            <h2>addEventListener</h2> <!-- titulo -->
+            <p>Recomiendan leer este artículo <a href="https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener">→ link aquí ←</a></p>
+        
+        </div>
+
+        <!-- clase7 - JS Control de flujo -->
+        <div id="clase7js" class="chapter">
+
+            <h2>Control de flujo</h2> <!-- titulo -->
+
+            <!-- if else -->
             <pre><code class="language-js">
     let edad = 33;
 
@@ -133,9 +173,9 @@
         console.log("Es menor de edad"); 
     }
             </code></pre>
-            <br>
-            <br>
+
             <h3>Funciones</h3>
+            <!-- funciones -->
             <pre><code class="language-js">
     function saludar(nombre){
         console.log("hola " + nombre);
@@ -147,40 +187,64 @@
 
     let resultado = sumar(3, 4);
             </code></pre>
-        </div>
 
-        <!-- clase2 - JS Ejercicio de practica -->
+            <h3>Generar HTML desde JavaScript</h3>
 
-        <!-- clase3 - JS Pregutnas de practica -->
+            <p>(dado un archivo)....</p>
+            <p>En la consola, al escribir document, recibimos el html, osea, es la referencia al documento html</p>
 
-        <!-- clase4 - JS Operador Typeof -->
-        <div id="clase4js" class="chapter">
-            <h2>Operador Typeof</h2>
-            <p>Recomiendan leer este artículo <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Operators/typeof">→ link aquí ←</a></p>
-        </div>
-        
-        <!-- clase5 - JS DOM -->
-        <div id="clase5js" class="chapter">
-            <p>Recomiendan leer este artículo <a href="https://developer.mozilla.org/es/docs/Glossary/DOM">→ link aqui ←</a></p>
-        </div>
+            <pre><code class="language-js">
+// para acceder a nuestro documento desde JavaScript
 
-        <!-- clase6 - JS addEventListener -->
-        <div id="clase6js" class="chapter">
-            <p>Recomiendan leer este artículo <a href="https://developer.mozilla.org/es/docs/Web/API/EventTarget/addEventListener">→ link aquí ←</a></p>
-        </div>
+document // da todo el documento
 
-        <!-- clase7 - JS Control de flujo -->
-        <div id="clase7js" class="chapter">
-            
+document.body // devuelve todo el body
+
+document.head // devuelve todo el head
+            </code></pre>
+
+            <p>Para acceder al documento, se pueden utilizar, la etiqueta, el id, la clase.</p>
+            <pre><code class="language-js">
+document.querySelector("#lista-tareas"); // selecciona mediante id
+document.querySelector(".lista-tareas"); // selecciona mediante clase
+            </code></pre>
+
+            <p>
+                Se suele usar el nombre main.js para el archivo principal de javascript, <br>
+                se suele anclar en el html en la parte inferior (dentro del body), ya que el html va leyendo desde arriba hacia abajo. 
+            </p>
+
+            <p>Los comentarios se escriben iniciando con // si es un renglón solo, o entre /* si son uno o varios renglones */</p>
+
+            <h3>Agregar elementos a una lista de tareas:</h3>
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="LYMpgPr" data-user="vdrr89" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/vdrr89/pen/LYMpgPr">
+                lista de tareas</a> by vdrr89 (<a href="https://codepen.io/vdrr89">@vdrr89</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
         </div>
 
         <!-- clase8 - JS Zip descargable -->
 
         <!-- clase9 - JS Ejercicio de Práctica de Clase -->
+        <div id="clase9js" class="chapter">
+
+            <h2>Ejercicio de práctica de clase</h2>
+            <p>(En un archivo dado):</p>
+            <ul>
+                <li>Agregar funcionalidades de agregado de tareas</li>
+                <li>Agregar funcionalidad para completar tareas (click en una tarea debe borrarla de la lista)</li>
+            </ul>
+
+        </div>
 
         <!-- clase10 - JS Despedida -->
 
     </main>
+
+    <!-- FOOTER -->
+    <iframe id="footer-section" src="../general/footer.html" frameborder="0" scrolling="no" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"></iframe>
 
     <!-- Code Style -->
     <script src="../prism/prism.js"></script>

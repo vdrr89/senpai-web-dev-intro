@@ -1,14 +1,15 @@
-Hola!, estos son unos apuntes de un curso introductorio que estoy tomando en Senpai (es online y (al menos de momento) es gratuito). 
+Hola!, estos son mis apuntes del:<br>
+[Curso de Introducción al Desarrollo Web de Senpai](https://cursos.senpaiacademy.com/course/cidw-3-2023)
 
 
+Si queires puedes ver este :<br>
+[resumen en Github Pages](https://vdrr89.github.io/senpai-web-dev-intro/)
 
+<br><br>
+---
+<br><br>
 
-Si queires puedes ver este resumen en Github Pages: [→ aquí ←](https://vdrr89.github.io/senpai-web-dev-intro/)
-
-
-
-
-Si me quieres contactar, me puedes enviar un mensaje mediante Discord, mi usuario es vdrr89
-
-
-También me puedes enviar un mail a [vdrr89@gmail.com](mailto:vdrr89@gmail.com)
+:email: [vdrr89@gmail.com](mailto:vdrr89@gmail.com)<br>
+:link: Discord: vdrr89<br>
+:earth_americas: Montevideo, Uruguay<br>
+:woman: :globe_with_meridians: vdrr89

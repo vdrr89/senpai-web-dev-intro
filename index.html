@@ -18,12 +18,48 @@
 </head>
 <body class="allBackground">
 
-    <iframe src="general/header.html" frameborder="0" scrolling="no" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"></iframe>
-    <iframe src="general/menu.html" frameborder="0" scrolling="no" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"></iframe>
-    <iframe src="clases/claseshtml.html" frameborder="0" scrolling="no" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"></iframe>
-    <iframe src="clases/clasecss.html" frameborder="0" scrolling="no" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"></iframe>
-    <iframe src="general/next.html" frameborder="0" scrolling="no" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"></iframe>
-    <iframe src="general/footer.html" frameborder="0" scrolling="no" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"></iframe>
+    <!-- HEADER -->
+    <iframe id="header-section" src="general/header.html" frameborder="0" scrolling="no" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"></iframe>
+    
+    <!-- WELCOME -->
+    <p class="welcome">
+        Hola! Soy Verónica, aquí tengo algunas notas<br>
+        sobre un <b>curso introductorio de Web Development</b><br> 
+        que tomé online en <b>Senpai.</b>
+    </p>
+
+    <!-- CONTENT -->
+    <div class="all-content">
+        <!-- html -->
+        <div class="content-language">
+            <a href="clases/claseshtml.html">
+                <img src="img/html5.svg" alt="html">
+                <h2>HTML</h2>
+            </a>
+        </div>
+
+        <!-- css -->
+        <div class="content-language">
+            <a href="clases/clasecss.html">
+                <img src="img/css3.svg" alt="css">
+                <h2>CSS</h2>
+            </a>
+        </div>
+
+        <!-- js -->
+        <div class="content-language">
+            <a href="clases/clasesjs.html">
+                <img src="img/javascript.svg" alt="JavaScript">
+                <h2>JS</h2>
+            </a>
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <iframe id="footer-section" src="general/footer.html" frameborder="0" scrolling="no" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"></iframe>
+
+    <!-- My Style -->
+    <script src="main.js"></script>
 
     <!-- Code Style -->
     <script src="prism/prism.js"></script>

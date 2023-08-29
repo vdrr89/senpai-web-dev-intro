@@ -16,98 +16,105 @@
     <!-- Code Style -->
 	<link href="../prism/prism.css" rel="stylesheet" />
 </head>
-<body>
+<body class="allBackground">
 
+    <!-- HEADER -->
+    <iframe id="header-section" src="../general/header.html" frameborder="0" scrolling="no" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"></iframe>
+
+    <!-- CLASES CSS -->
     <main id="clasesCSS">
         
         <h1>Clases CSS</h1>
 
         <!-- Clase 1 - CSS Introducción: Selectores -->
         <div id="clase1css" class="chapter">
-            <div> <!-- title -->
-                <h2>CSS Introducción: selectores</h2>   
-            </div>
-            <div> <!-- content -->
-                <p>En esta clase se explica como usar CSS dentro de la etiqueta head, aunque también se puede usar CSS en otro archivo aparte para luego "linkearlo" dentro de la etiqueta head.</p>
-                <p class="grayblock">Dentro del archivo <span class="highlight">html</span>, dentro de la etiqueta <span class="highlight">head</span>, creamos una etiqueta <span class="highlight">style</span>, y dentro de eésta, elegimos un selector, por ejemplo p ó h1 y le asignamos un color, un tamaño de fuente.</p>
-                <img src="https://www.w3schools.com/css/img_selector.gif" alt="css nombres" style="border: none; border-radius: 0; margin: 1em 0;">
-                <p><span class="highlight">En css se puede sobreescribir</span>, osea, el navegdor va leyendo desde arriba hacia abajo, si primero le damos un color a p, y luego le damos otro color a p, finalemente se va a mostrar el último color</p>
-                <p>Los selectores pueden ser etiquetas, clases, id</p>
-                <p><b>En clase se hizo así:</b></p>
-                <pre><code class="language-html">
+            <h2>CSS Introducción: selectores</h2> <!-- title -->
+           
+            <!-- content -->
+            <p>En esta clase se explica como usar CSS dentro de la etiqueta head, aunque también se puede usar CSS en otro archivo aparte para luego "linkearlo" dentro de la etiqueta head.</p>
+            <p class="grayblock">Dentro del archivo <span class="highlight">html</span>, dentro de la etiqueta <span class="highlight">head</span>, creamos una etiqueta <span class="highlight">style</span>, y dentro de eésta, elegimos un selector, por ejemplo p ó h1 y le asignamos un color, un tamaño de fuente.</p>
+            <img src="https://www.w3schools.com/css/img_selector.gif" alt="css nombres" style="border: none; border-radius: 0; margin: 1em 0;">
+            <p><span class="highlight">En css se puede sobreescribir</span>, osea, el navegdor va leyendo desde arriba hacia abajo, si primero le damos un color a p, y luego le damos otro color a p, finalemente se va a mostrar el último color</p>
+            <p>Los selectores pueden ser etiquetas, clases, id</p>
+            <p><b>En clase se hizo así:</b></p>
+            <!-- donde va el <style> -->
+            <pre><code class="language-html">
+&lt;!DOCTYPE html>
+&lt;head>
+    &lt;title>Aquí va el title&lt;/title>
+    &lt;style>  &lt;!-- Acá ponemos la etiqueta style y dentro el estilo --&gt
+        body {
+            background-color: lightblue;
+        }
+            
+        h1 {
+            color: navy;
+            margin-left: 20px;
+        }
+    &lt;/style>
+&lt;/head>
+
+&lt;body>
+    --- Aquí va todo el body ---
+&lt;/body>
+&lt;/html>
+            </code></pre>
+            <br>
+            <p><b>También se puede hacer así:</b></p>
+            <!-- como hacer el link rel -->
+            <pre><code class="language-html">
 &lt;!DOCTYPE html>
     &lt;head>
+        &lt;link rel="stylesheet" href="aquí-la-ruta-y-nombre-del-archivo.css"> &lt;!-- aquí se "linkea" el otro documento que contiene el css --&gt
         &lt;title>Aquí va el title&lt;/title>
-        &lt;style>  &lt;!-- Acá ponemos la etiqueta style y dentro el estilo --&gt
-            body {
-                background-color: lightblue;
-            }
-                
-            h1 {
-                color: navy;
-                margin-left: 20px;
-            }
-        &lt;/style>
     &lt;/head>
 
     &lt;body>
-        --- Aquí va todo el body ---
+        &lt;p>Aquí va todo el body&lt;/p>
     &lt;/body>
 &lt;/html>
-                </code></pre>
-                <br>
-                <p><b>También se puede hacer así:</b></p>
-                <pre><code class="language-html">
-    &lt;!DOCTYPE html>
-        &lt;head>
-            &lt;link rel="stylesheet" href="aquí-la-ruta-y-nombre-del-archivo.css"> &lt;!-- aquí se "linkea" el otro documento que contiene el css --&gt
-            &lt;title>Aquí va el title&lt;/title>
-        &lt;/head>
+            </code>
+            </code></pre>
 
-        &lt;body>
-            &lt;p>Aquí va todo el body&lt;/p>
-        &lt;/body>
-    &lt;/html>
-                </code>
-                </code></pre>
+            <h3>Comentarios</h3>
+            <p>Los comentarios se escriben con /* y cerrandose con */ de esta forma:</p>
+            <pre><code class="language-css">/* Comentario aquí */</code></pre>
 
-                <h3>Comentarios</h3>
-                <p>Los comentarios se escriben con /* y cerrandose con */ de esta forma:</p>
-                <pre><code class="language-css">/* Comentario aquí */</code></pre>
-
-                <h3>Que puede servir de selector?</h3>
-                <p>
-                    Pueden servir las <span class="highlight">etiquetas</span>, <b>como un p o un ul</b><br>
-                    Pueden servir las <span class="highlight">clases</span>, que se escriben <b>con un punto delante</b>, por ejemplo, para la clase titulos se escribiría .titulos<br>
-                    Pueden servir los <span class="highlight">id</span> de los elementos, que se escriben <b>con un # delante</b>, por ejemplo, si el id se llama contenido1, el selector se escribe #contenido1
-                </p>
-                <pre><code class="language-css">
+            <h3>Que puede servir de selector?</h3>
+            <p>
+                Pueden servir las <span class="highlight">etiquetas</span>, <b>como un p o un ul</b><br>
+                Pueden servir las <span class="highlight">clases</span>, que se escriben <b>con un punto delante</b>, por ejemplo, para la clase titulos se escribiría .titulos<br>
+                Pueden servir los <span class="highlight">id</span> de los elementos, que se escriben <b>con un # delante</b>, por ejemplo, si el id se llama contenido1, el selector se escribe #contenido1
+            </p>
+            <!-- escritura de selectores en css -->
+            <pre><code class="language-css">
 p{
-    color: red;
+color: red;
 }
 
 .titulos{
-    font-size: 24px;
+font-size: 24px;
 }
 
 #contenido1{
-    border: 1px solid coral;
+border: 1px solid coral;
 }
-                </code></pre>
-                <p>Estos selectores funcionan, debido a que <span class="highlight">tienen su referencia en el html</span>, por ejemplo, todos los p van a cumplir las propiedades que se escribieron en el CSS, todas las etiquetas que tengan la clase titulos y los id contenido1 van a cumplir las propiedades que se les asignó en el CSS.</p>
+            </code></pre>
+            <p>Estos selectores funcionan, debido a que <span class="highlight">tienen su referencia en el html</span>, por ejemplo, todos los p van a cumplir las propiedades que se escribieron en el CSS, todas las etiquetas que tengan la clase titulos y los id contenido1 van a cumplir las propiedades que se les asignó en el CSS.</p>
 
-                <h3>Como asigno los selectores class e id en el html?</h3>
-                <p>
-                    Las etiquetas como p ul img ya al escribirlas quedan designadas, las clases se colocan dentro de cada etiqueta en la siguiente forma:
-                </p>
-                <pre><code class="language-html">
-&lt;p class="aquiLaClase">Aquí el contenido del párrafo&lt;/p>
-                </code></pre>
-                <p>Los identificadores (id) se colocan de forma silimar:</p>
-                <pre><code class="language-html">
-&lt;div id="aquiElIdentificador">&lt;/div>
-                </code></pre>
-            </div>
+            <h3>Como asigno los selectores class e id en el html?</h3>
+            <p>
+                Las etiquetas como p ul img ya al escribirlas quedan designadas, las clases se colocan dentro de cada etiqueta en la siguiente forma:
+            </p>
+            <!-- escritura de clase en etiqueta html -->
+            <pre><code class="language-html">
+&lt;p class="aquiLaClase"> Aquí el contenido del párrafo &lt;/p>
+            </code></pre>
+
+            <p>Los identificadores (id) se colocan de forma silimar:</p>
+            <pre><code class="language-html">
+&lt;div id="aquiElIdentificador"> &lt;/div>
+            </code></pre>
         </div>
 
         <!-- Clase 2 - CSS Preguntas de práctica de clase -->
@@ -115,160 +122,144 @@ p{
         <!-- Clase 3 - CSS Ejercicio de práctica -->
         <div id="clase3css" class="chapter">
 
-            <div><!-- titulo -->
-                <h2>Ejercicio de práctica</h2>
-            </div>
-
-            <div><!-- contenido -->
-                <p>Hacer un HTML con varios elementos y aplicarle las propiedades:</p>
-                <ul>
-                    <li>Color</li>
-                    <li>Width</li>
-                    <li>Height</li>
-                    <li>background-color</li>
-                    <li>border-radius</li>
-                </ul>
-            </div>
+            <h2>Ejercicio de práctica</h2><!-- titulo -->
+           
+            <!-- contenido -->
+            <p>Hacer un HTML con varios elementos y aplicarle las propiedades:</p>
+            <ul>
+                <li>Color</li>
+                <li>Width</li>
+                <li>Height</li>
+                <li>background-color</li>
+                <li>border-radius</li>
+            </ul>
 
         </div>
 
         <!-- Clase 4 - CSS Valores y unidades en CSS -->
         <div id="clase4css" class="chapter">
 
-            <div><!-- titulo -->
-                <h2>Valores y Unidades en CSS</h2>
-            </div>
-            <div> <!-- contenido -->
-                <p>
-                    Recomiendan leer este artículo <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Values_and_units">→ link aquí ←</a>
-                </p>
-            </div>
+            <h2>Valores y Unidades en CSS</h2><!-- titulo -->
 
+            <!-- contenido -->
+            <p>Recomiendan leer este artículo <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Values_and_units">→ link aquí ←</a></p>
+            
         </div>
 
         <!-- Clase 5 - CSS Colores -->
         <div id="clase5css" class="chapter">
 
-            <div><!-- titulo -->
-                <h2>Colores</h2>
-            </div>
+            <h2>Colores</h2><!-- titulo -->
 
-            <div><!-- contenido -->
-                <p>Recomiendan leer este artículo: <a href="https://developer.mozilla.org/es/docs/Web/CSS/color_value"> → aquí el link ←</a></p>
-            </div>
+            <!-- contenido -->
+            <p>Recomiendan leer este artículo: <a href="https://developer.mozilla.org/es/docs/Web/CSS/color_value"> → aquí el link ←</a></p>
 
         </div>
 
         <!-- Pique1CSS - fuentes y colores web source -->
         <div id="pique1css" class="chapter">
-            <div> <!-- title -->
-                <h2>Pique (fuentes y colores web):</h2>
+            <h2>Pique (fuentes y colores web):</h2> <!-- title -->
+
+            <!-- content -->
+            <!-- Colores Hexadecimales info -->
+            <div id="coloresHexadecimales" class="divNoDeco">
+                <h3>Colores Hexadecimales</h3>
+                <p>Los colores hexadecimales tienen 6 digitos y se conforman así:</p>
+                <pre><code class="language-css">#aabf19</code></pre>
+                <p>
+                    van desde el 0 hasta el 9 y continúa con la a hasta la f</br>
+                    se dividen de a 2 dígitos aa bb cc<br>
+                    siendo éstos r g b (red, green blue), ( #rrggbb )<br>
+                    cuando éstos grupos tienen la misma letra se pueden resumir a 3 dígitos, por ejemplo
+                </p>
+                <pre><code class="language-css">#aabbcc = #abc</code></pre>
+                <p><b>referencia:</b> el 000 blanco y la fff negro</p>
+                <p>Para agregarle transparecnia se le agregan 2 números al finalizar el color</p>
+                <pre><code class="language-css">#aabbcc80</code></pre>
             </div>
-            <div> <!-- content -->
-                <!-- Colores Hexadecimales info -->
-                <div id="coloresHexadecimales" class="divNoDeco">
-                    <h3>Colores Hexadecimales</h3>
-                    <p>Los colores hexadecimales tienen 6 digitos y se conforman así:</p>
-                    <pre><code class="language-css">#aabf19</code></pre>
-                    <p>
-                        van desde el 0 hasta el 9 y continúa con la a hasta la f</br>
-                        se dividen de a 2 dígitos aa bb cc<br>
-                        siendo éstos r g b (red, green blue), ( #rrggbb )<br>
-                        cuando éstos grupos tienen la misma letra se pueden resumir a 3 dígitos, por ejemplo
-                    </p>
-                    <pre><code class="language-css">#aabbcc = #abc</code></pre>
-                    <p><b>referencia:</b> el 000 blanco y la fff negro</p>
-                    <p>Para agregarle transparecnia se le agregan 2 números al finalizar el color</p>
-                    <pre><code class="language-css">#aabbcc80</code></pre>
-                </div>
 
-                <!-- Colores RGB info -->
-                <div id="coloresRGB" class="divNoDeco">
-                    <h3>RGB</h3>
-                    <p>
-                        RGB = Red Green Blue<br>
-                        <span class="highlight">Se usa para pantallas</span>, se emite através de la luz<br>
-                        La combinación de estos colores forma el blanco, y la ausencia de los mismos el negro.
-                    </p>
-                    <img style="max-width: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Synthese%2B.svg/119px-Synthese%2B.svg.png" alt="colores-rgb">
-                    <p>Se puede incluir RGB con transparencia, lo cual sería RGBA</p>
-                    <pre><code class="language-css">
-    rgba(red, green, blue, alpha)
-    rgba(255, 99, 71, 0.5)
-                    </code></pre>
-                    
-                </div>
-
-                <!-- vdrr89  -->
-                <!-- Fuentes info -->
-                <div id="fuentes" class="divNoDeco">
-
-                </div>
-
-                <!-- Colores y fuentes Resources -->
-                <div id="coloresFuentesResources" class="divNoDeco">
-                    <p>Acá hay más información sobre colores web:</p>
-                    <ul>
-                        <li><a href="https://es.wikipedia.org/wiki/Colores_web">Colores Web en Wikipedia</a></li>
-                        <li><a href="https://www.w3.org/TR/css-color-3/#html4">colores en CSS en W3Schools</a></li>
-                        <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/color">Colores en MDN Mozilla</a></li>
-                        <li><a href="https://uxdesign.cc/color-effect-b78fae8bb72f">Psicología del color y UX para diseño web by UX Collective</a></li>
-                    </ul>    
-                    
-                    <p>
-                        Alugnos lugares donde se pueden conseguir fuentes es por ejemplo <a href="https://fonts.google.com/">Google Fonts</a><br>
-                        Y para conseguir colores web, en formato hexadecimal se pueden encontrar en <a href="https://www.w3schools.com/colors/colors_picker.asp">una aplicación de W3Schools</a>
-                    </p>
-                </div>
-
-                <!-- vdrr89 // add -->
-                <!-- Instalar y usar fuentes -->
-
-                <!-- vdrr89 // add -->
-                <!-- Extra - Variables para color y fuentes -->
+            <!-- Colores RGB info -->
+            <div id="coloresRGB" class="divNoDeco">
+                <h3>RGB</h3>
+                <p>
+                    RGB = Red Green Blue<br>
+                    <span class="highlight">Se usa para pantallas</span>, se emite através de la luz<br>
+                    La combinación de estos colores forma el blanco, y la ausencia de los mismos el negro.
+                </p>
+                <img style="max-width: 200px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Synthese%2B.svg/119px-Synthese%2B.svg.png" alt="colores-rgb">
+                <p>Se puede incluir RGB con transparencia, lo cual sería RGBA</p>
+                <pre><code class="language-css">
+rgba(red, green, blue, alpha)
+rgba(255, 99, 71, 0.5)
+                </code></pre>
+                
             </div>
+
+            <!-- vdrr89  -->
+            <!-- Fuentes info -->
+            <div id="fuentes" class="divNoDeco">
+
+            </div>
+
+            <!-- Colores y fuentes Resources -->
+            <div id="coloresFuentesResources" class="divNoDeco">
+                <p>Acá hay más información sobre colores web:</p>
+                <ul>
+                    <li><a href="https://es.wikipedia.org/wiki/Colores_web">Colores Web en Wikipedia</a></li>
+                    <li><a href="https://www.w3.org/TR/css-color-3/#html4">colores en CSS en W3Schools</a></li>
+                    <li><a href="https://developer.mozilla.org/es/docs/Web/CSS/color">Colores en MDN Mozilla</a></li>
+                    <li><a href="https://uxdesign.cc/color-effect-b78fae8bb72f">Psicología del color y UX para diseño web by UX Collective</a></li>
+                </ul>    
+                
+                <p>
+                    Alugnos lugares donde se pueden conseguir fuentes es por ejemplo <a href="https://fonts.google.com/">Google Fonts</a><br>
+                    Y para conseguir colores web, en formato hexadecimal se pueden encontrar en <a href="https://www.w3schools.com/colors/colors_picker.asp">una aplicación de W3Schools</a>
+                </p>
+            </div>
+
+            <!-- vdrr89 // add -->
+            <!-- Instalar y usar fuentes -->
+
+            <!-- vdrr89 // add -->
+            <!-- Extra - Variables para color y fuentes -->
         </div>
 
         <!-- Clase 6 - CSS Cascada Herencia y Especificidad -->
         <div id="clase6css" class="chapter">
             
-            <div><!-- titulo -->
-                <h2>Cascada, Herencia y Especificidad</h2>
-            </div>
+            <h2>Cascada, Herencia y Especificidad</h2><!-- titulo -->
 
-            <div><!-- contenido -->
-                <h3>Cascada</h3>
-                <p>
-                    La cascada implica que <span class="highlight">el orden importa</span><br>
-                    <b>El que se visualiza finalmente es la declaración que se encuentre por debajo,</b><br>
-                    Estos documentos leen como nosotros, de izquierda a derecha y de arriba hacia abajo.<br>
-                    <br>
-                    Por ejemplo si a la etiqueta p le asignamos un color, luego escribimos más código, y luego a la misma etiqueta p le asignamos otro color, se mostrará el último color asignado.
-                </p>
+            <!-- contenido -->
+            <h3>Cascada</h3>
+            <p>
+                La cascada implica que <span class="highlight">el orden importa</span><br>
+                <b>El que se visualiza finalmente es la declaración que se encuentre por debajo,</b><br>
+                Estos documentos leen como nosotros, de izquierda a derecha y de arriba hacia abajo.<br>
+                <br>
+                Por ejemplo si a la etiqueta p le asignamos un color, luego escribimos más código, y luego a la misma etiqueta p le asignamos otro color, se mostrará el último color asignado.
+            </p>
 
-                <h3>Especificidad</h3>
-                <p>
-                    Se refiere a que <span class="highlight">si los selectores son específicos, tiene más peso que los demás</span>,<br>
-                    sin importar que estén escritos por debajo o encima.
-                </p>
-                <h3>Orden dentro de la especificidad</h3>
-                <ul>
-                    <li>id</li>
-                    <li>class</li>
-                    <li>p</li>
-                </ul>
-                <p>Recomiendan leer este artículo sobre especificidad: <a href="https://developer.mozilla.org/es/docs/Web/CSS/Specificity">→ link aquí ←</a></p>
+            <h3>Especificidad</h3>
+            <p>
+                Se refiere a que <span class="highlight">si los selectores son específicos, tiene más peso que los demás</span>,<br>
+                sin importar que estén escritos por debajo o encima.
+            </p>
+            <h3>Orden dentro de la especificidad</h3>
+            <ul>
+                <li>id</li>
+                <li>class</li>
+                <li>p</li>
+            </ul>
+            <p>Recomiendan leer este artículo sobre especificidad: <a href="https://developer.mozilla.org/es/docs/Web/CSS/Specificity">→ link aquí ←</a></p>
 
-                <h3>Herencia</h3>
-                <p>
-                    <span class="highlight">El elemento padre hereda sus propiedades a los elementos hijos,</span><br>
-                    No todas las propiedades son heredables.<br>
-                    <br>
-                    Por ejemplo si asignamos un color a una ul, las li van a adquirir ese color, <br>
-                    Sin embargo, si le asignamos un color a una li, la ul <b>no</b> las hereda. 
-                </p>
-
-            </div>
+            <h3>Herencia</h3>
+            <p>
+                <span class="highlight">El elemento padre hereda sus propiedades a los elementos hijos,</span><br>
+                No todas las propiedades son heredables.<br>
+                <br>
+                Por ejemplo si asignamos un color a una ul, las li van a adquirir ese color, <br>
+                Sin embargo, si le asignamos un color a una li, la ul <b>no</b> las hereda. 
+            </p>
 
         </div>
 
@@ -276,121 +267,113 @@ p{
 
         <!-- Clase 8 - CSS Link a Especificidad -->
         <div id="clase8css" class="chapter">
-            <div><!-- titulo -->
-                <h2>Especificidad</h2>
-            </div>
-            <div><!-- Contenido -->
-                <p>Recomiendan leer este artículo: <a href="https://developer.mozilla.org/es/docs/Web/CSS/Specificity">→ link aquí ←</a></p>
-            </div>
+            <h2>Especificidad</h2><!-- titulo -->
+
+            <!-- Contenido -->
+            <p>Recomiendan leer este artículo: <a href="https://developer.mozilla.org/es/docs/Web/CSS/Specificity">→ link aquí ←</a></p>
         </div>
 
         <!-- Clase 9 - CSS Cascada y Herencia -->
         <div id="clase9css" class="chapter">
-            <div><!-- titulo -->
-                <h2>Cascada y Herencia</h2>
-            </div>
-            <div><!-- contenido -->
-                <p>Recomiendan leer este artículo: <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">→ link aquí ←</a></p>
-            </div>
+            <h2>Cascada y Herencia</h2><!-- titulo -->
+
+            <!-- contenido -->
+            <p>Recomiendan leer este artículo: <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">→ link aquí ←</a></p>
         </div>
 
-        <!-- vdrr89 // fix // to do -->
         <!-- Clase 10 - CSS Modelo de c -->
         <div id="clase10css" class="chapter">
-            <div><!-- titulo -->
-                <h2>Modelo de Caja</h2>
-            </div>
-            <div><!-- contenido -->
+            <h2>Modelo de Caja</h2><!-- titulo -->
 
-                <p>Todos los elementos en html están contenidos en alguna caja</p>
-                <h3>Inspector de Google</h3>
-                <p>Para abrir el inspector de Google, hay que (en el navegador de Google (Chrome)), en una página que quieras, hay que hacer <span class="highlight">click derecho y elegir la opción "Inspeccionar"</span> (que en general es la última)</p>
-                <!-- vdrr89 // fix // poner aquí img del inspector -->
-                <p>el bloque que se encuentra abajo es el que tiene menos importancia, cada bloque tiene el nombre del archivo en donde se encuentra (si se le hace click te lleva a esa sección en el documento)</p>
-                <!-- vdrr89 // fix // poner img más abajo -->
-                <p>Aquí se muestra el modelo de caja, que muestra los márgenes, el padding y el borde que este bloque contiene.</p>
-                
-                <h3>Margin y Padding</h3>
-                <p>El <b>margin</b> es el espacio que hay <span class="highlight">desde el borde del bloque hacia afuera,</span> (hacia los lados, hacia arriba y abajo</p>
-                <p>El <b>padding</b> es el espacio que hay <span class="highlight">entre el borde del objeto y el interior del contenido</span></p>
-                <br>
-                <!-- codepen example: margin y padding -->
-                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJryEoX" data-user="vdrr89" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-                    <span>See the Pen <a href="https://codepen.io/vdrr89/pen/OJryEoX">
-                    ejemplo de margin</a> by vdrr89 (<a href="https://codepen.io/vdrr89">@vdrr89</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                </p>
-                <br>
-                <h3>Organización de los valores del margin y padding</h3>
-                <p>Funciona como las agujas del reloj, comienza arriba, luego a la derecha, luego abajo, luego izquierda</p>
-                <pre><code class="language-css">
+            <!-- contenido -->
+            <p>Todos los elementos en html están contenidos en alguna caja</p>
+            <h3>Inspector de Google</h3>
+            <p>Para abrir el inspector de Google, hay que (en el navegador de Google (Chrome)), en una página que quieras, hay que hacer <span class="highlight">click derecho y elegir la opción "Inspeccionar"</span> (que en general es la última)</p>
+            <!-- vdrr89 // fix // poner aquí img del inspector -->
+            <p>el bloque que se encuentra abajo es el que tiene menos importancia, cada bloque tiene el nombre del archivo en donde se encuentra (si se le hace click te lleva a esa sección en el documento)</p>
+            <!-- vdrr89 // fix // poner img más abajo -->
+            <p>Aquí se muestra el modelo de caja, que muestra los márgenes, el padding y el borde que este bloque contiene.</p>
+            
+            <h3>Margin y Padding</h3>
+            <p>El <b>margin</b> es el espacio que hay <span class="highlight">desde el borde del bloque hacia afuera,</span> (hacia los lados, hacia arriba y abajo</p>
+            <p>El <b>padding</b> es el espacio que hay <span class="highlight">entre el borde del objeto y el interior del contenido</span></p>
+            <br>
+            <!-- codepen example: margin y padding -->
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="OJryEoX" data-user="vdrr89" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/vdrr89/pen/OJryEoX">
+                ejemplo de margin</a> by vdrr89 (<a href="https://codepen.io/vdrr89">@vdrr89</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
+            <h3>Organización de los valores del margin y padding</h3>
+            <p>Funciona como las agujas del reloj, comienza arriba, luego a la derecha, luego abajo, luego izquierda</p>
+            <pre><code class="language-css">
 p{
-    margin: 2px 3px 4px 5px;
-    padding: 6px 8px 6px 8px;
+margin: 2px 3px 4px 5px;
+padding: 6px 8px 6px 8px;
 
-    /* ↑ → ↓ ← */
+/* ↑ → ↓ ← */
 
 }
-                </code></pre>
-                <p>También se puede resumir a dos valores, los cuales representan arriba y abajo - derecha e izquierda, respectivamente:</p>
-                <pre><code class="language-css">
+            </code></pre>
+            <p>También se puede resumir a dos valores, los cuales representan arriba y abajo - derecha e izquierda, respectivamente:</p>
+            <pre><code class="language-css">
 p{
-    margin: 2px 3px;
-    padding: 6px 8px;
+margin: 2px 3px;
+padding: 6px 8px;
 
-    /* ↑&↓ →&← */
+/* ↑&↓ →&← */
 
 }
-                </code></pre>
-                <p>También se puede resumir con un solo valor, que aplica para todos los lados</p>
-                <pre><code class="language-css">
+            </code></pre>
+            <p>También se puede resumir con un solo valor, que aplica para todos los lados</p>
+            <pre><code class="language-css">
 p{
-    margin: 2px;
-    padding: 6px;
+margin: 2px;
+padding: 6px;
 
-    /* all */
+/* all */
 }
-                </code></pre>
+            </code></pre>
 
-                <h3>Border</h3>
-                <p>El borde se puede escribir asignandole el grosor del mismo (en caso de tenerlo), si es solido o por ejemplo punteado y el color</p>
-                <pre><code class="language-css">
+            <h3>Border</h3>
+            <p>El borde se puede escribir asignandole el grosor del mismo (en caso de tenerlo), si es solido o por ejemplo punteado y el color</p>
+            <pre><code class="language-css">
 .division1{
-    border: 5px solid black;
+border: 5px solid black;
 }
 
 .division2{
-    border: 2px dotted brown;
+border: 2px dotted brown;
 }
-                </code></pre>
+            </code></pre>
 
-                <h3>El asterisco</h3>
-                <p>Este símbolo quiere decir que aplica a todos los elementos</p>
-                <pre><code class="language-css">
+            <h3>El asterisco</h3>
+            <p>Este símbolo quiere decir que aplica a todos los elementos</p>
+            <pre><code class="language-css">
 *{
-    font-size: 16px;
+font-size: 16px;
 }
-                </code></pre>
-                <p>Esto quiere decir que todos los textos van a tener 16px</p>
+            </code></pre>
+            <p>Esto quiere decir que todos los textos van a tener 16px</p>
 
-                <h3>Alto y ancho</h3>
-                <p>Se puede determinar el alto y ancho de cada elemento</p>
-                <pre><code class="language-css">
+            <h3>Alto y ancho</h3>
+            <p>Se puede determinar el alto y ancho de cada elemento</p>
+            <pre><code class="language-css">
 .division1{
-    width: 280px;
-    height: 100px;
+width: 280px;
+height: 100px;
 }
-                </code></pre>
-                <p>Hay que tener en cuenta el tamaño del borde, margin, padding</p>
+            </code></pre>
+            <p>Hay que tener en cuenta el tamaño del borde, margin, padding</p>
 
-                <h3>Border Box</h3>
-                <p>Considera que todas las partes interiores (incluyendo el borde) del modelo de caja tienen que entrar en ese ancho y alto que estamos designando</p>
-                <pre><code class="language-css">
+            <h3>Border Box</h3>
+            <p>Considera que todas las partes interiores (incluyendo el borde) del modelo de caja tienen que entrar en ese ancho y alto que estamos designando</p>
+            <pre><code class="language-css">
 .division1{
-    box-sizing: border-box;
+box-sizing: border-box;
 }
-                </code></pre>
-            </div>
+            </code></pre>
 
         </div>
 
@@ -398,19 +381,19 @@ p{
 
         <!-- clase 12 - CSS Modelo de Caja CSS -->
         <div id="clase12css" class="chapter">
-            <div><!-- Titulo -->
-                <h2>Modelo de caja ejercicio</h2>
-            </div>
-            <div><!-- Contenido -->
-                <p>Crear un documento HTML de la siguiente forma:</p>
-                <ul>
-                    <li>Que tenga una estructura apropiada</li>
-                    <li>Que utilice elementos en línea (button, span, etc)</li>
-                    <li>Que utilice elementos en bloque (p, h1, div, main, etc)</li>
-                    <li>Agregue las propiedades del modelo de caja a los elementos (margin, padding, border, width, height)</li>
-                </ul>
-                <p>Recomiendan leer este artículo: <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model">→ link aquí ←</a></p>
-            </div>
+            
+            <h2>Modelo de caja ejercicio</h2><!-- Titulo -->
+
+            <!-- Contenido -->
+            <p>Crear un documento HTML de la siguiente forma:</p>
+            <ul>
+                <li>Que tenga una estructura apropiada</li>
+                <li>Que utilice elementos en línea (button, span, etc)</li>
+                <li>Que utilice elementos en bloque (p, h1, div, main, etc)</li>
+                <li>Agregue las propiedades del modelo de caja a los elementos (margin, padding, border, width, height)</li>
+            </ul>
+            <p>Recomiendan leer este artículo: <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/The_box_model">→ link aquí ←</a></p>
+        
         </div>
 
         <!-- clase 13 - CSS Flexbox -->
@@ -444,77 +427,75 @@ p{
         <!-- clase 15 - CSS Completa los 24 desfíos -->
         <div id="clase15css" class="chapter">
 
-            <div><!-- titulo -->
-                <h2>Completa los 24 desfíos</h2>
-            </div>
+            <h2>Completa los 24 desfíos</h2><!-- titulo -->
 
-            <div><!-- contenido -->
-                <p>Recomiendan realizar ejercicios en ésta página: <a href="https://flexboxfroggy.com/#es">→ link aquí←</a></p>
-            </div>
+            <!-- contenido -->
+            <p>Recomiendan realizar ejercicios en ésta página: <a href="https://flexboxfroggy.com/#es">→ link aquí←</a></p>
 
         </div>
 
         <!-- clase 16 - CSS Ejemplo de flex -->
         <div id="clase16css" class="chapter">
-            <div><!-- titulo -->
-                <h2>Ejemplo de flex</h2>
-            </div>
-            <div><!-- contenido -->
-                <p>Brindan este ejemplo de flex:</p>
-                <!-- codepen snippet -->
-                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="oNJjMwj" data-user="vdrr89" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-                    <span>See the Pen <a href="https://codepen.io/vdrr89/pen/oNJjMwj">
-                    ejemplo de flexbox</a> by vdrr89 (<a href="https://codepen.io/vdrr89">@vdrr89</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                  </p>
-            </div>
+
+            <h2>Ejemplo de flex</h2><!-- titulo -->
+
+            <!-- contenido -->
+            <p>Brindan este ejemplo de flex:</p>
+            <!-- codepen snippet -->
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="oNJjMwj" data-user="vdrr89" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/vdrr89/pen/oNJjMwj">
+                ejemplo de flexbox</a> by vdrr89 (<a href="https://codepen.io/vdrr89">@vdrr89</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+
         </div>
 
         <!-- clase 17 - CSS Conceptos básicos de flex -->
         <div id="clase17css" class="chapter">
-            <div><!-- titulo -->
-                <h2>Conceptos básicos de flex</h2>
-            </div>
-            <div><!-- contenido -->
-                <p>Recomiendan leer este artículo: <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">→ link aquí←</a></p>
-            </div>
+            <h2>Conceptos básicos de flex</h2><!-- titulo -->
+
+            <!-- contenido -->
+            <p>Recomiendan leer este artículo: <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">→ link aquí←</a></p>
+            
         </div>
 
         <!-- clase 18 - CSS Grid -->
         <div id="clase18css" class="chapter">
-            <div><!-- titulo -->
-                <h2>Grid</h2>
-            </div>
-            <div><!-- contenido -->
-                <p>Dan este link para leer: <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout">→ link aqui←</a></p>
-            </div>
+            <h2>Grid</h2><!-- titulo -->
+
+            <!-- contenido -->
+            <p>Dan este link para leer: <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Grid_Layout">→ link aqui←</a></p>
+
         </div>
 
         <!-- clase 19 - CSS Ejemplos de flexbox -->
         <div id="clase19css" class="chapter">
-            <div><!-- titulo -->
-                <h2>Ejemplos de Flexbox</h2>
-            </div>
-            <div><!-- contenido -->
-                <p>Nos muestran un ejemplo, y hay que replicarlo.</p>
-                <p>
-                    Es un sitio con título, menu y contenido<br>
-                    Para que sea semánticamente correcto, al menú (la navegación), la ubican dentro de una etiqueta nav, y en ella colocan los items del menú dentro de una lista desordenada<br>
-                    Le agrega los estilos dentro del html, dentro del head, para comenzar a darle forma<br>
-                    Usan gap para separar elementos
-                </p>
-                <!-- ejemplo en codepen -->
-                <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="qBLOKaM" data-user="vdrr89" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
-                    <span>See the Pen <a href="https://codepen.io/vdrr89/pen/qBLOKaM">
-                    senpai exercise</a> by vdrr89 (<a href="https://codepen.io/vdrr89">@vdrr89</a>)
-                    on <a href="https://codepen.io">CodePen</a>.</span>
-                </p>
-            </div>
+            <h2>Ejemplos de Flexbox</h2><!-- titulo -->
+
+            <!-- contenido -->
+            <p>Nos muestran un ejemplo, y hay que replicarlo.</p>
+            <p>
+                Es un sitio con título, menu y contenido<br>
+                Para que sea semánticamente correcto, al menú (la navegación), la ubican dentro de una etiqueta nav, y en ella colocan los items del menú dentro de una lista desordenada<br>
+                Le agrega los estilos dentro del html, dentro del head, para comenzar a darle forma<br>
+                Usan gap para separar elementos
+            </p>
+            
+            <!-- ejemplo en codepen -->
+            <p class="codepen" data-height="300" data-default-tab="html,result" data-slug-hash="qBLOKaM" data-user="vdrr89" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+                <span>See the Pen <a href="https://codepen.io/vdrr89/pen/qBLOKaM">
+                senpai exercise</a> by vdrr89 (<a href="https://codepen.io/vdrr89">@vdrr89</a>)
+                on <a href="https://codepen.io">CodePen</a>.</span>
+            </p>
+            
         </div>
 
         <!-- clase 19 - CSS Congrats -->
 
     </main>
+
+    <!-- FOOTER -->
+    <iframe id="footer-section" src="../general/footer.html" frameborder="0" scrolling="no" onload="this.style.height=(this.contentWindow.document.body.scrollHeight+20)+'px';"></iframe>
 
     <!-- Code Style -->
     <script src="../prism/prism.js"></script>
